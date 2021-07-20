@@ -2,7 +2,7 @@
 ## Overview
 A template using "Commanders Act" OnSite CMP API (https://community.commandersact.com/trustcommander/onsite-api/getting-started) to manage consent in GTM.
 
-The Full documentation is available at https://community.commandersact.com/trustcommander/setup-guides/tag-manager/consent-mode-enablement-in-gtm.
+The full documentation is available at https://community.commandersact.com/trustcommander/setup-guides/tag-manager/consent-mode-enablement-in-gtm.
 
 ## Licence
 See the LICENCE file for details.
