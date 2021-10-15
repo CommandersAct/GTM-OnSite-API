@@ -13,7 +13,9 @@
 # limitations under the License.
 
 homepage: "https://www.commandersact.com"
-documentation: "https://community.commandersact.com/trustcommander/onsite-api/getting-started"
+documentation: "https://community.commandersact.com/trustcommander/setup-guides/tag-manager/consent-mode-in-gtm"
 versions:
+  - sha: 6c6a17bd6612bdf9e24550410291969f6fe196f5
+    changeNotes: Updated core capabilities.
   - sha: 043eb04f79ddedcf75557937de2870ecc3e29d46
     changeNotes: Initial Version
