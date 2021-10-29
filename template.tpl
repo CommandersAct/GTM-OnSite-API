@@ -177,21 +177,19 @@ const makeInteger = require('makeInteger');
 // Default settings via "setDefaultConsentState" API
 logToConsole("Firing default command...");
 setDefaultConsentState({
-  'ad_storage': data.rdDefAd,
-  'analytics_storage': data.rdDefAnalytics,
-  'functionality_storage': data.rdDefFunctionality,
-  'personalization_storage': data.rdDefPersonalization,
-  'security_storage': data.rdDefSecurity,
-  'wait_for_update': (typeof data.waitforUpdate !== "undefined")?makeInteger(data.waitforUpdate):0
+    'ad_storage': data.rdDefAd,
+    'analytics_storage': data.rdDefAnalytics,
+    'functionality_storage': data.rdDefFunctionality,
+    'personalization_storage': data.rdDefPersonalization,
+    'security_storage': data.rdDefSecurity,
+    'wait_for_update': (typeof data.waitforUpdate !== "undefined") ? makeInteger(data.waitforUpdate) : 0
 });
 
 // Ensure CA Stub is initialized via "createArgumentsQueue" API
 var cact = createArgumentsQueue('cact', 'caReady');
 logToConsole("CA Stub initialized...");
 
-cact('consent.get', function (result) {
-  // Update settings via "setDefaultConsentState" API
-  if (result.consent.status !== "unset") {
+function setConsentUpdateCommand (result) {
     const adObj = result.consent.categories[data.caTrustAdStorageCatId] || {};
     const analyticsObj = result.consent.categories[data.caTrustAnalyticsStorageCatId] || {};
     const functionalityObj = result.consent.categories[data.caTrustFunctionalityStorageCatId] || {};
@@ -203,126 +201,63 @@ cact('consent.get', function (result) {
     var personalizationStatus = "";
     var securityStatus = "";
     if (adObj.status === 'on') {
-      logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: "+ data.caTrustAdStorageCatId +" is granted!");
-      adStatus = "granted";
+        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: " + data.caTrustAdStorageCatId + " is granted!");
+        adStatus = "granted";
     } else if (adObj.status === 'off') {
-      logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: "+ data.caTrustAdStorageCatId +" is denied!");
-      adStatus = "denied";
-    } 
+        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: " + data.caTrustAdStorageCatId + " is denied!");
+        adStatus = "denied";
+    }
     if (analyticsObj.status === 'on') {
-      logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: "+ data.caTrustAnalyticsStorageCatId +" is granted!");
-      analyticsStatus = "granted";
+        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: " + data.caTrustAnalyticsStorageCatId + " is granted!");
+        analyticsStatus = "granted";
     } else if (analyticsObj.status === 'off') {
-      logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: "+ data.caTrustAnalyticsStorageCatId +" is denied!");
-      analyticsStatus = "denied";
+        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: " + data.caTrustAnalyticsStorageCatId + " is denied!");
+        analyticsStatus = "denied";
     }
     if (functionalityObj.status === 'on') {
-      logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: "+ data.caTrustFunctionalityStorageCatId +" is granted!");
-      functionalityStatus = "granted";
+        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: " + data.caTrustFunctionalityStorageCatId + " is granted!");
+        functionalityStatus = "granted";
     } else if (functionalityObj.status === 'off') {
-      logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: "+ data.caTrustFunctionalityStorageCatId +" is denied!");
-      functionalityStatus = "denied";
+        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: " + data.caTrustFunctionalityStorageCatId + " is denied!");
+        functionalityStatus = "denied";
     }
     if (personalizationObj.status === 'on') {
-      logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: "+ data.caTrustPersonalizationStorageCatId +" is granted!");
-      personalizationStatus = "granted";
+        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: " + data.caTrustPersonalizationStorageCatId + " is granted!");
+        personalizationStatus = "granted";
     } else if (personalizationObj.status === 'off') {
-      logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: "+ data.caTrustPersonalizationStorageCatId +" is denied!");
-      personalizationStatus = "denied";
+        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: " + data.caTrustPersonalizationStorageCatId + " is denied!");
+        personalizationStatus = "denied";
     }
     if (securityObj.status === 'on') {
-      logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: "+ data.caTrustSecurityStorageCatId +" is granted!");
-      securityStatus = "granted";
+        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: " + data.caTrustSecurityStorageCatId + " is granted!");
+        securityStatus = "granted";
     } else if (securityObj.status === 'off') {
-      logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: "+ data.caTrustSecurityStorageCatId +" is denied!");
-      securityStatus = "denied";
+        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: " + data.caTrustSecurityStorageCatId + " is denied!");
+        securityStatus = "denied";
     }
     logToConsole("Firing update command...");
     updateConsentState({
-      'ad_storage': adStatus,
-      'analytics_storage': analyticsStatus,
-      'functionality_storage': functionalityStatus,
-      'personalization_storage': personalizationStatus,
-      'security_storage': securityStatus,
-      'wait_for_update': (typeof data.waitforUpdate !== "undefined")?makeInteger(data.waitforUpdate):0
+        'ad_storage': adStatus,
+        'analytics_storage': analyticsStatus,
+        'functionality_storage': functionalityStatus,
+        'personalization_storage': personalizationStatus,
+        'security_storage': securityStatus,
+        'wait_for_update': (typeof data.waitforUpdate !== "undefined") ? makeInteger(data.waitforUpdate) : 0
     });
-  }
+}
+
+cact('consent.get', function (result) {
+	logToConsole("Commanders Act | OnSite API: consent.get");
+    logToConsole("result: ", result);
+    if (result.consent.status !== "unset") {
+        setConsentUpdateCommand(result);
+    }
 });
 
 cact('consent.onUpdate', function (result) {
-  logToConsole("Commanders Act | OnSite API: consent.onUpdate");
-  logToConsole("result: ", result);
-  if (result.consent.status === "unset") {
-    logToConsole("data: ", data);
-    // Default settings via "setDefaultConsentState" API
-    logToConsole("Firing default command onUpdate...");
-    setDefaultConsentState({
-      'ad_storage': data.rdDefAd,
-      'analytics_storage': data.rdDefAnalytics,
-      'functionality_storage': data.rdDefFunctionality,
-      'personalization_storage': data.rdDefPersonalization,
-      'security_storage': data.rdDefSecurity,
-      'wait_for_update': (typeof data.waitforUpdate !== "undefined")?makeInteger(data.waitforUpdate):0
-    });
-  } else {
-    // Update settings via "updateConsentState" API
-    const adObj = result.consent.categories[data.caTrustAdStorageCatId] || {};
-    const analyticsObj = result.consent.categories[data.caTrustAnalyticsStorageCatId] || {};
-    const functionalityObj = result.consent.categories[data.caTrustFunctionalityStorageCatId] || {};
-    const personalizationObj = result.consent.categories[data.caTrustPersonalizationStorageCatId] || {};
-    const securityObj = result.consent.categories[data.caTrustSecurityStorageCatId] || {};
-    var adStatus = "";
-    var analyticsStatus = "";
-    var functionalityStatus = "";
-    var personalizationStatus = "";
-    var securityStatus = "";
-    if ((result.updateEvent === "changed" || result.updateEvent === "set")) {
-      if (adObj.status === 'on') {
-        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: "+ data.caTrustAdStorageCatId +" is granted!");
-        adStatus = "granted";
-      } else if (adObj.status === 'off') {
-        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: "+ data.caTrustAdStorageCatId +" is denied!");
-        adStatus = "denied";
-      } 
-      if (analyticsObj.status === 'on') {
-        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: "+ data.caTrustAnalyticsStorageCatId +" is granted!");
-        analyticsStatus = "granted";
-      } else if (analyticsObj.status === 'off') {
-        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: "+ data.caTrustAnalyticsStorageCatId +" is denied!");
-        analyticsStatus = "denied";
-      }
-      if (functionalityObj.status === 'on') {
-        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: "+ data.caTrustFunctionalityStorageCatId +" is granted!");
-        functionalityStatus = "granted";
-      } else if (functionalityObj.status === 'off') {
-        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: "+ data.caTrustFunctionalityStorageCatId +" is denied!");
-        functionalityStatus = "denied";
-      }
-      if (personalizationObj.status === 'on') {
-        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: "+ data.caTrustPersonalizationStorageCatId +" is granted!");
-        personalizationStatus = "granted";
-      } else if (personalizationObj.status === 'off') {
-        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: "+ data.caTrustPersonalizationStorageCatId +" is denied!");
-        personalizationStatus = "denied";
-      }
-      if (securityObj.status === 'on') {
-        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: "+ data.caTrustSecurityStorageCatId +" is granted!");
-        securityStatus = "granted";
-      } else if (securityObj.status === 'off') {
-        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: "+ data.caTrustSecurityStorageCatId +" is denied!");
-        securityStatus = "denied";
-      }
-    }
-    logToConsole("Firing update command onUpdate...");
-    updateConsentState({
-      'ad_storage': adStatus,
-      'analytics_storage': analyticsStatus,
-      'functionality_storage': functionalityStatus,
-      'personalization_storage': personalizationStatus,
-      'security_storage': securityStatus,
-      'wait_for_update': (typeof data.waitforUpdate !== "undefined")?makeInteger(data.waitforUpdate):0
-    });
-  }
+    logToConsole("Commanders Act | OnSite API: consent.onUpdate");
+    logToConsole("result: ", result);
+    setConsentUpdateCommand(result);
 });
 
 data.gtmOnSuccess();
@@ -670,6 +605,6 @@ scenarios: []
 
 ___NOTES___
 
-Created on 15/10/2021, 10:12:14
+Created on 29/10/2021, 12:53:06
 
 
