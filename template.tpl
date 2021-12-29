@@ -165,14 +165,14 @@ ___TEMPLATE_PARAMETERS___
   },
   {
     "type": "CHECKBOX",
-    "name": "advancedSettings",
-    "checkboxText": "Advanced Settings",
+    "name": "advancedFeatures",
+    "checkboxText": "Advanced Features",
     "simpleValueType": true
   },
   {
     "type": "GROUP",
-    "name": "advancedSettingsGroup",
-    "displayName": "Advanced Settings",
+    "name": "advancedFeaturesGroup",
+    "displayName": "Advanced Features",
     "groupStyle": "ZIPPY_OPEN",
     "subParams": [
       {
@@ -184,7 +184,7 @@ ___TEMPLATE_PARAMETERS___
     ],
     "enablingConditions": [
       {
-        "paramName": "advancedSettings",
+        "paramName": "advancedFeatures",
         "paramValue": true,
         "type": "EQUALS"
       }
@@ -405,7 +405,7 @@ cact('consent.onUpdate', function (result) {
   logToConsole("result: ", result);
   setConsentUpdateCommand(result);
 
-  if ((data.advancedSettings === true) && (data.activateReactiveEvents === true)) {
+  if ((data.advancedFeatures === true) && (data.activateReactiveEvents === true)) {
     const dataLayerPush = createQueue('dataLayer');
     if (data.activateAdEvent) {
       if ((caPrevConsent.consent.categories[data.caTrustAdStorageCatId].status !== "on") && 
