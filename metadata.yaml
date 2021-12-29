@@ -15,6 +15,8 @@
 homepage: "https://www.commandersact.com"
 documentation: "https://community.commandersact.com/trustcommander/setup-guides/tag-manager/consent-mode-in-gtm"
 versions:
+  - sha: 2d178180cda51ec357ecc60cd8c436c627e11e4f
+    changeNotes: Improved naming convention for groups.
   - sha: 6665a1fe82e3a54b32a254b791e28fde61877da1
     changeNotes: Code improvements.
   - sha: 9097e376b7b8b3fae65b1f46633e4dab6e33f230
