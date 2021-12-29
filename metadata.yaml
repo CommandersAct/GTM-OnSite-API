@@ -15,6 +15,8 @@
 homepage: "https://www.commandersact.com"
 documentation: "https://community.commandersact.com/trustcommander/setup-guides/tag-manager/consent-mode-in-gtm"
 versions:
+  - sha: 6665a1fe82e3a54b32a254b791e28fde61877da1
+    changeNotes: Code improvements.
   - sha: 9097e376b7b8b3fae65b1f46633e4dab6e33f230
     changeNotes: Added option to send reactive GTM events for all five standard categories.
   - sha: 2a007a8046978bc246e111feb760b0eb6b012667
