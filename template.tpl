@@ -1,12 +1,4 @@
-﻿___TERMS_OF_SERVICE___
-
-By creating or modifying this file you agree to Google Tag Manager's Community
-Template Gallery Developer Terms of Service available at
-https://developers.google.com/tag-manager/gallery-tos (or such other URL as
-Google may provide), as modified from time to time.
-
-
-___INFO___
+﻿___INFO___
 
 {
   "type": "TAG",
@@ -162,6 +154,153 @@ ___TEMPLATE_PARAMETERS___
     ],
     "simpleValueType": true,
     "help": "Default status for \"Security Storage\" before interacting with the privacy banner."
+  },
+  {
+    "type": "CHECKBOX",
+    "name": "advancedSettings",
+    "checkboxText": "Advanced Settings",
+    "simpleValueType": true
+  },
+  {
+    "type": "GROUP",
+    "name": "advancedSettingsGroup",
+    "displayName": "Advanced Settings",
+    "groupStyle": "ZIPPY_OPEN",
+    "subParams": [
+      {
+        "type": "CHECKBOX",
+        "name": "activateReactiveEvents",
+        "checkboxText": "Activate Reactive Events",
+        "simpleValueType": true
+      }
+    ],
+    "enablingConditions": [
+      {
+        "paramName": "advancedSettings",
+        "paramValue": true,
+        "type": "EQUALS"
+      }
+    ]
+  },
+  {
+    "type": "GROUP",
+    "name": "reactiveEventGroup",
+    "displayName": "Reactive Events",
+    "groupStyle": "ZIPPY_OPEN",
+    "subParams": [
+      {
+        "type": "CHECKBOX",
+        "name": "activateAdEvent",
+        "checkboxText": "Activate \"Ad Storage\" Reactive Event",
+        "simpleValueType": true
+      },
+      {
+        "type": "TEXT",
+        "name": "adEventName",
+        "displayName": "Ad Storage Event Name:",
+        "simpleValueType": true,
+        "help": "GTM custom reactive event name for \"Ad Storage\". Default name: \"reactiveAdOn\". You need to configure a \"Custom Event\" trigger using the same event name.",
+        "defaultValue": "reactiveAdOn",
+        "enablingConditions": [
+          {
+            "paramName": "activateAdEvent",
+            "paramValue": true,
+            "type": "EQUALS"
+          }
+        ]
+      },
+      {
+        "type": "CHECKBOX",
+        "name": "activateAnalyticsEvent",
+        "checkboxText": "Activate \"Analytics Storage\" Reactive Event",
+        "simpleValueType": true
+      },
+      {
+        "type": "TEXT",
+        "name": "analyticsEventName",
+        "displayName": "Analytics Storage Event Name:",
+        "simpleValueType": true,
+        "help": "GTM custom reactive event name for \"Analytics Storage\". Default name: \"reactiveAnalyticsOn\". You need to configure a \"Custom Event\" trigger using the same event name.",
+        "defaultValue": "reactiveAnalyticsOn",
+        "enablingConditions": [
+          {
+            "paramName": "activateAnalyticsEvent",
+            "paramValue": true,
+            "type": "EQUALS"
+          }
+        ]
+      },
+      {
+        "type": "CHECKBOX",
+        "name": "activateFunctionalityEvent",
+        "checkboxText": "Activate \"Functionality Storage\" Reactive Event",
+        "simpleValueType": true
+      },
+      {
+        "type": "TEXT",
+        "name": "functionalityEventName",
+        "displayName": "Functionality Storage Event Name:",
+        "simpleValueType": true,
+        "help": "GTM custom reactive event name for \"Functionality Storage\". Default name: \"reactiveFunctionalityOn\". You need to configure a \"Custom Event\" trigger using the same event name.",
+        "defaultValue": "reactiveFunctionalityOn",
+        "enablingConditions": [
+          {
+            "paramName": "activateFunctionalityEvent",
+            "paramValue": true,
+            "type": "EQUALS"
+          }
+        ]
+      },
+      {
+        "type": "CHECKBOX",
+        "name": "activatePersonalizationEvent",
+        "checkboxText": "Activate \"Personalization Storage\" Reactive Event",
+        "simpleValueType": true
+      },
+      {
+        "type": "TEXT",
+        "name": "personalizationEventName",
+        "displayName": "Personalization Storage Event Name:",
+        "simpleValueType": true,
+        "help": "GTM custom reactive event name for \"Personalization Storage\". Default name: \"reactivePersonalizationOn\". You need to configure a \"Custom Event\" trigger using the same event name.",
+        "defaultValue": "reactivePersonalizationOn",
+        "enablingConditions": [
+          {
+            "paramName": "activatePersonalizationEvent",
+            "paramValue": true,
+            "type": "EQUALS"
+          }
+        ]
+      },
+      {
+        "type": "CHECKBOX",
+        "name": "activateSecurityEvent",
+        "checkboxText": "Activate \"Security Storage\" Reactive Event",
+        "simpleValueType": true
+      },
+      {
+        "type": "TEXT",
+        "name": "securityEventName",
+        "displayName": "Security Storage Event Name:",
+        "simpleValueType": true,
+        "help": "GTM custom reactive event name for \"Security Storage\". Default name: \"reactiveSecurityOn\". You need to configure a \"Custom Event\" trigger using the same event name.",
+        "defaultValue": "reactiveSecurityOn",
+        "enablingConditions": [
+          {
+            "paramName": "activateSecurityEvent",
+            "paramValue": true,
+            "type": "EQUALS"
+          }
+        ]
+      }
+    ],
+    "enablingConditions": [
+      {
+        "paramName": "activateReactiveEvents",
+        "paramValue": true,
+        "type": "EQUALS"
+      }
+    ]
   }
 ]
 
@@ -173,6 +312,7 @@ const setDefaultConsentState = require('setDefaultConsentState');
 const updateConsentState = require('updateConsentState');
 const logToConsole = require('logToConsole');
 const makeInteger = require('makeInteger');
+const createQueue = require('createQueue');
 
 // Default settings via "setDefaultConsentState" API
 logToConsole("Firing default command...");
@@ -188,6 +328,7 @@ setDefaultConsentState({
 // Ensure CA Stub is initialized via "createArgumentsQueue" API
 var cact = createArgumentsQueue('cact', 'caReady');
 logToConsole("CA Stub initialized...");
+var caPrevConsent = "";
 
 function setConsentUpdateCommand (result) {
     const adObj = result.consent.categories[data.caTrustAdStorageCatId] || {};
@@ -195,11 +336,7 @@ function setConsentUpdateCommand (result) {
     const functionalityObj = result.consent.categories[data.caTrustFunctionalityStorageCatId] || {};
     const personalizationObj = result.consent.categories[data.caTrustPersonalizationStorageCatId] || {};
     const securityObj = result.consent.categories[data.caTrustSecurityStorageCatId] || {};
-    var adStatus = "";
-    var analyticsStatus = "";
-    var functionalityStatus = "";
-    var personalizationStatus = "";
-    var securityStatus = "";
+    var adStatus = "", analyticsStatus = "", functionalityStatus = "", personalizationStatus = "", securityStatus = "";
     if (adObj.status === 'on') {
         logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: " + data.caTrustAdStorageCatId + " is granted!");
         adStatus = "granted";
@@ -252,12 +389,62 @@ cact('consent.get', function (result) {
     if (result.consent.status !== "unset") {
         setConsentUpdateCommand(result);
     }
+    caPrevConsent = result;
 });
 
 cact('consent.onUpdate', function (result) {
-    logToConsole("Commanders Act | OnSite API: consent.onUpdate");
-    logToConsole("result: ", result);
-    setConsentUpdateCommand(result);
+  logToConsole("Commanders Act | OnSite API: consent.onUpdate");
+  logToConsole("result: ", result);
+  setConsentUpdateCommand(result);
+
+  if ((data.advancedSettings === true) && (data.activateReactiveEvents === true)) {
+    const dataLayerPush = createQueue('dataLayer');
+    if (data.activateAdEvent) {
+      if ((caPrevConsent.consent.categories[data.caTrustAdStorageCatId].status !== "on") && 
+          (result.consent.categories[data.caTrustAdStorageCatId].status === "on")) {
+        logToConsole("Commanders Act | Notify GTM that 'Ad Storage' is now on (was off)...");
+        dataLayerPush({
+          'event': data.adEventName
+        });
+      }
+    }
+    if (data.activateAnalyticsEvent) {
+      if ((caPrevConsent.consent.categories[data.caTrustAnalyticsStorageCatId].status !== "on") && 
+          (result.consent.categories[data.caTrustAnalyticsStorageCatId].status === "on")) {
+        logToConsole("Commanders Act | Notify GTM that 'Analytics Storage' is now on (was off)...");
+        dataLayerPush({
+          'event': data.analyticsEventName
+        });
+      }
+    }
+    if (data.activateFunctionalityEvent) {
+      if ((caPrevConsent.consent.categories[data.caTrustFunctionalityStorageCatId].status !== "on") && 
+          (result.consent.categories[data.caTrustFunctionalityStorageCatId].status === "on")) {
+        logToConsole("Commanders Act | Notify GTM that 'Functionality Storage' is now on (was off)...");
+        dataLayerPush({
+          'event': data.functionalityEventName
+        });
+      }
+    }
+    if (data.activatePersonalizationEvent) {
+      if ((caPrevConsent.consent.categories[data.caTrustPersonalizationStorageCatId].status !== "on") && 
+          (result.consent.categories[data.caTrustPersonalizationStorageCatId].status === "on")) {
+        logToConsole("Commanders Act | Notify GTM that 'Personalization Storage' is now on (was off)...");
+        dataLayerPush({
+          'event': data.personalizationEventName
+        });
+      }
+    }
+    if (data.activateSecurityEvent) {
+      if ((caPrevConsent.consent.categories[data.caTrustSecurityStorageCatId].status !== "on") && 
+          (result.consent.categories[data.caTrustSecurityStorageCatId].status === "on")) {
+        logToConsole("Commanders Act | Notify GTM that 'Security Storage' is now on (was off)...");
+        dataLayerPush({
+          'event': data.securityEventName
+        });
+      }
+    }
+  }
 });
 
 data.gtmOnSuccess();
@@ -584,6 +771,45 @@ ___WEB_PERMISSIONS___
                     "boolean": true
                   }
                 ]
+              },
+              {
+                "type": 3,
+                "mapKey": [
+                  {
+                    "type": 1,
+                    "string": "key"
+                  },
+                  {
+                    "type": 1,
+                    "string": "read"
+                  },
+                  {
+                    "type": 1,
+                    "string": "write"
+                  },
+                  {
+                    "type": 1,
+                    "string": "execute"
+                  }
+                ],
+                "mapValue": [
+                  {
+                    "type": 1,
+                    "string": "dataLayer"
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  }
+                ]
               }
             ]
           }
@@ -605,6 +831,6 @@ scenarios: []
 
 ___NOTES___
 
-Created on 29/10/2021, 12:53:06
+Created on 28/12/2021, 10:37:09
 
 
