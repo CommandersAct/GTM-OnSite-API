@@ -165,6 +165,20 @@ ___TEMPLATE_PARAMETERS___
   },
   {
     "type": "CHECKBOX",
+    "name": "enableUrlPassthrough",
+    "checkboxText": "Enable \"URL Passthrough\"",
+    "simpleValueType": true,
+    "help": "Activate \"URL Passthrough\". For more information, you can check this \u003ca href\u003d\"https://developers.google.com/tag-platform/devguides/consent#passing_ad_click_client_id_and_session_id_information_in_urls\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
+  },
+  {
+    "type": "CHECKBOX",
+    "name": "enableAdsDataRedaction",
+    "checkboxText": "Enable \"Ads Data Redaction\"",
+    "simpleValueType": true,
+    "help": "Activate \"Ads Data Redaction\". For more information, you can check this \u003ca href\u003d\"https://developers.google.com/tag-platform/devguides/consent#redact_ads_data\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
+  },
+  {
+    "type": "CHECKBOX",
     "name": "advancedFeatures",
     "checkboxText": "Advanced Features",
     "simpleValueType": true
@@ -321,6 +335,17 @@ const updateConsentState = require('updateConsentState');
 const logToConsole = require('logToConsole');
 const makeInteger = require('makeInteger');
 const createQueue = require('createQueue');
+
+const gtag = createArgumentsQueue('gtag', 'dataLayer');
+gtag('set', 'developer_id.dOWVhY2', true);
+if (data.enableUrlPassthrough) {
+  gtag('set', 'url_passthrough', true);
+  logToConsole("Commanders Act | OnSite API: Url Passthrough set to TRUE");
+}
+if (data.enableAdsDataRedaction) {
+  gtag('set', 'ads_data_redaction', true);
+  logToConsole("Commanders Act | OnSite API: Ads Data Redaction set to TRUE");
+}
 
 // Default settings via "setDefaultConsentState" API
 logToConsole("Firing default command...");
@@ -804,6 +829,45 @@ ___WEB_PERMISSIONS___
                   {
                     "type": 1,
                     "string": "dataLayer"
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  }
+                ]
+              },
+              {
+                "type": 3,
+                "mapKey": [
+                  {
+                    "type": 1,
+                    "string": "key"
+                  },
+                  {
+                    "type": 1,
+                    "string": "read"
+                  },
+                  {
+                    "type": 1,
+                    "string": "write"
+                  },
+                  {
+                    "type": 1,
+                    "string": "execute"
+                  }
+                ],
+                "mapValue": [
+                  {
+                    "type": 1,
+                    "string": "gtag"
                   },
                   {
                     "type": 8,
