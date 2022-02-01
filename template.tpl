@@ -414,6 +414,34 @@ function setConsentUpdateCommand (result) {
         'security_storage': securityStatus,
         'wait_for_update': (typeof data.waitforUpdate !== "undefined") ? makeInteger(data.waitforUpdate) : 0
     });
+    if (data.advancedSettings && data.activateReactiveEvents) {
+      const dataLayerPush = createQueue('dataLayer');
+      if (data.activateAdEvent) {
+        dataLayerPush({
+          'event': data.adEventName
+        });
+      }
+      if (data.analyticsEventName) {
+        dataLayerPush({
+          'event': data.analyticsEventName
+        });
+      }
+      if (data.functionalityEventName) {
+        dataLayerPush({
+          'event': data.functionalityEventName
+        });
+      }
+      if (data.personalizationEventName) {
+        dataLayerPush({
+          'event': data.personalizationEventName
+        });
+      }
+      if (data.securityEventName) {
+        dataLayerPush({
+          'event': data.securityEventName
+        });
+      }
+    }
 }
 
 cact('consent.get', function (result) {
@@ -430,7 +458,7 @@ cact('consent.onUpdate', function (result) {
   logToConsole("result: ", result);
   setConsentUpdateCommand(result);
 
-  if ((data.advancedFeatures === true) && (data.activateReactiveEvents === true)) {
+  if (data.advancedFeatures && data.activateReactiveEvents) {
     const dataLayerPush = createQueue('dataLayer');
     if (data.activateAdEvent) {
       if ((caPrevConsent.consent.categories[data.caTrustAdStorageCatId].status !== "on") && 
