@@ -79,89 +79,260 @@ ___TEMPLATE_PARAMETERS___
     "valueHint": "500"
   },
   {
-    "type": "RADIO",
-    "name": "rdDefAd",
-    "displayName": "Default \"Ad Storage\"",
-    "radioItems": [
+    "type": "GROUP",
+    "name": "defaultAdStorageGroup",
+    "displayName": "Default Consent for \"Ad Storage\"",
+    "groupStyle": "NO_ZIPPY",
+    "subParams": [
       {
-        "value": "denied",
-        "displayValue": "Denied"
-      },
-      {
-        "value": "granted",
-        "displayValue": "Granted"
+        "type": "SIMPLE_TABLE",
+        "name": "defaultAdStorageTable",
+        "displayName": "Mapping",
+        "simpleTableColumns": [
+          {
+            "defaultValue": "",
+            "displayName": "Default Consent",
+            "name": "default_consent",
+            "type": "SELECT",
+            "selectItems": [
+              {
+                "value": "denied",
+                "displayValue": "Denied"
+              },
+              {
+                "value": "granted",
+                "displayValue": "Granted"
+              }
+            ],
+            "macrosInSelect": false
+          },
+          {
+            "defaultValue": "",
+            "displayName": "Region",
+            "name": "region",
+            "type": "TEXT"
+          }
+        ],
+        "valueValidators": [
+          {
+            "type": "NON_EMPTY",
+            "enablingConditions": [
+              {
+                "paramName": "disableDefaultConsent",
+                "paramValue": false,
+                "type": "EQUALS"
+              }
+            ],
+            "errorMessage": ""
+          }
+        ],
+        "help": "Default status for \"Ad Storage\" before interacting with the privacy banner and by region.\nLeave the \"Region\" field empty to apply your selection to all regions."
       }
-    ],
-    "simpleValueType": true,
-    "help": "Default status for \"Ad Storage\" before interacting with the privacy banner."
+    ]
   },
   {
-    "type": "RADIO",
-    "name": "rdDefAnalytics",
-    "displayName": "Default \"Analytics Storage\"",
-    "radioItems": [
+    "type": "GROUP",
+    "name": "defaultAnalyticsGroup",
+    "displayName": "Default Consent for \"Analytics Storage\"",
+    "groupStyle": "NO_ZIPPY",
+    "subParams": [
       {
-        "value": "denied",
-        "displayValue": "Denied"
-      },
-      {
-        "value": "granted",
-        "displayValue": "Granted"
+        "type": "SIMPLE_TABLE",
+        "name": "defaultAnalyticsStorageTable",
+        "displayName": "Mapping",
+        "simpleTableColumns": [
+          {
+            "defaultValue": "",
+            "displayName": "Default Consent",
+            "name": "default_consent",
+            "type": "SELECT",
+            "selectItems": [
+              {
+                "value": "denied",
+                "displayValue": "Denied"
+              },
+              {
+                "value": "granted",
+                "displayValue": "Granted"
+              }
+            ],
+            "macrosInSelect": false
+          },
+          {
+            "defaultValue": "",
+            "displayName": "Region",
+            "name": "region",
+            "type": "TEXT"
+          }
+        ],
+        "valueValidators": [
+          {
+            "type": "NON_EMPTY",
+            "enablingConditions": [
+              {
+                "paramName": "disableDefaultConsent",
+                "paramValue": false,
+                "type": "EQUALS"
+              }
+            ]
+          }
+        ],
+        "help": "Default status for \"Analytics Storage\" before interacting with the privacy banner and by region. Leave the \"Region\" field empty to apply your selection to all regions."
       }
-    ],
-    "simpleValueType": true,
-    "help": "Default status for \"Analytics Storage\" before interacting with the privacy banner."
+    ]
   },
   {
-    "type": "RADIO",
-    "name": "rdDefFunctionality",
-    "displayName": "Default \"Functionality Storage\"",
-    "radioItems": [
+    "type": "GROUP",
+    "name": "defaultFunctionalityGroup",
+    "displayName": "Default Consent for \"Functionality Storage\"",
+    "groupStyle": "NO_ZIPPY",
+    "subParams": [
       {
-        "value": "denied",
-        "displayValue": "Denied"
-      },
-      {
-        "value": "granted",
-        "displayValue": "Granted"
+        "type": "SIMPLE_TABLE",
+        "name": "defaultFunctionalityStorageTable",
+        "displayName": "Mapping",
+        "simpleTableColumns": [
+          {
+            "defaultValue": "",
+            "displayName": "Default Consent",
+            "name": "default_consent",
+            "type": "SELECT",
+            "selectItems": [
+              {
+                "value": "denied",
+                "displayValue": "Denied"
+              },
+              {
+                "value": "granted",
+                "displayValue": "Granted"
+              }
+            ],
+            "macrosInSelect": false
+          },
+          {
+            "defaultValue": "",
+            "displayName": "Region",
+            "name": "region",
+            "type": "TEXT"
+          }
+        ],
+        "valueValidators": [
+          {
+            "type": "NON_EMPTY",
+            "enablingConditions": [
+              {
+                "paramName": "disableDefaultConsent",
+                "paramValue": false,
+                "type": "EQUALS"
+              }
+            ]
+          }
+        ],
+        "help": "Default status for \"Functionality Storage\" before interacting with the privacy banner and by region. Leave the \"Region\" field empty to apply your selection to all regions."
       }
-    ],
-    "simpleValueType": true,
-    "help": "Default status for \"Functionality Storage\" before interacting with the privacy banner."
+    ]
   },
   {
-    "type": "RADIO",
-    "name": "rdDefPersonalization",
-    "displayName": "Default \"Personalization Storage\"",
-    "radioItems": [
+    "type": "GROUP",
+    "name": "defaultPersonalizationGroup",
+    "displayName": "Default Consent for \"Personalization Storage\"",
+    "groupStyle": "NO_ZIPPY",
+    "subParams": [
       {
-        "value": "denied",
-        "displayValue": "Denied"
-      },
-      {
-        "value": "granted",
-        "displayValue": "Granted"
+        "type": "SIMPLE_TABLE",
+        "name": "defaultPersonalizationStorageTable",
+        "displayName": "Mapping",
+        "simpleTableColumns": [
+          {
+            "defaultValue": "",
+            "displayName": "Default Consent",
+            "name": "default_consent",
+            "type": "SELECT",
+            "selectItems": [
+              {
+                "value": "denied",
+                "displayValue": "Denied"
+              },
+              {
+                "value": "granted",
+                "displayValue": "Granted"
+              }
+            ],
+            "macrosInSelect": false
+          },
+          {
+            "defaultValue": "",
+            "displayName": "Region",
+            "name": "region",
+            "type": "TEXT"
+          }
+        ],
+        "valueValidators": [
+          {
+            "type": "NON_EMPTY",
+            "enablingConditions": [
+              {
+                "paramName": "disableDefaultConsent",
+                "paramValue": false,
+                "type": "EQUALS"
+              }
+            ]
+          }
+        ],
+        "help": "Default status for \"Personalization Storage\" before interacting with the privacy banner and by region. Leave the \"Region\" field empty to apply your selection to all regions."
       }
-    ],
-    "simpleValueType": true,
-    "help": "Default status for \"Personalization Storage\" before interacting with the privacy banner."
+    ]
   },
   {
-    "type": "RADIO",
-    "name": "rdDefSecurity",
-    "displayName": "Default \"Security Storage\"",
-    "radioItems": [
+    "type": "GROUP",
+    "name": "defaultSecurityGroup",
+    "displayName": "Default Consent for \"Security Storage\"",
+    "groupStyle": "NO_ZIPPY",
+    "subParams": [
       {
-        "value": "denied",
-        "displayValue": "Denied"
-      },
-      {
-        "value": "granted",
-        "displayValue": "Granted"
+        "type": "SIMPLE_TABLE",
+        "name": "defaultSecurityStorageTable",
+        "displayName": "Mapping",
+        "simpleTableColumns": [
+          {
+            "defaultValue": "",
+            "displayName": "Default Consent",
+            "name": "default_consent",
+            "type": "SELECT",
+            "selectItems": [
+              {
+                "value": "denied",
+                "displayValue": "Denied"
+              },
+              {
+                "value": "granted",
+                "displayValue": "Granted"
+              }
+            ],
+            "macrosInSelect": false
+          },
+          {
+            "defaultValue": "",
+            "displayName": "Region",
+            "name": "region",
+            "type": "TEXT"
+          }
+        ],
+        "valueValidators": [
+          {
+            "type": "NON_EMPTY",
+            "enablingConditions": [
+              {
+                "paramName": "disableDefaultConsent",
+                "paramValue": false,
+                "type": "EQUALS"
+              }
+            ]
+          }
+        ],
+        "help": "Default status for \"Security Storage\" before interacting with the privacy banner and by region. Leave the \"Region\" field empty to apply your selection to all regions."
       }
-    ],
-    "simpleValueType": true,
-    "help": "Default status for \"Security Storage\" before interacting with the privacy banner."
+    ]
   },
   {
     "type": "CHECKBOX",
@@ -191,134 +362,170 @@ ___TEMPLATE_PARAMETERS___
     "subParams": [
       {
         "type": "CHECKBOX",
+        "name": "injectCmpJsFlag",
+        "checkboxText": "Inject CMP Script",
+        "simpleValueType": true,
+        "help": "You can directly inject Commanders Act CMP Script selecting this option."
+      },
+      {
+        "type": "TEXT",
+        "name": "injectCmpJsFullUrl",
+        "displayName": "URL:",
+        "simpleValueType": true,
+        "enablingConditions": [
+          {
+            "paramName": "injectCmpJsFlag",
+            "paramValue": true,
+            "type": "EQUALS"
+          }
+        ],
+        "help": "Enter your Commanders Act CMP Script full URL."
+      },
+      {
+        "type": "CHECKBOX",
+        "name": "disableDefaultConsent",
+        "checkboxText": "Disable Default Consent",
+        "simpleValueType": true,
+        "enablingConditions": [
+          {
+            "paramName": "advancedFeatures",
+            "paramValue": true,
+            "type": "EQUALS"
+          }
+        ],
+        "help": "Disabling the default consent may come handy when you don\u0027t want to use the Consent Mode."
+      },
+      {
+        "type": "CHECKBOX",
         "name": "activateReactiveEvents",
         "checkboxText": "Activate Reactive Events",
-        "simpleValueType": true
+        "simpleValueType": true,
+        "help": "Third-party vendor tags require additional settings to properly operate with the user consent."
+      },
+      {
+        "type": "GROUP",
+        "name": "reactiveEventGroup",
+        "displayName": "Reactive Events",
+        "groupStyle": "ZIPPY_OPEN",
+        "subParams": [
+          {
+            "type": "CHECKBOX",
+            "name": "activateAdEvent",
+            "checkboxText": "Activate \"Ad Storage\" Reactive Event",
+            "simpleValueType": true
+          },
+          {
+            "type": "TEXT",
+            "name": "adEventName",
+            "displayName": "Ad Storage Event Name:",
+            "simpleValueType": true,
+            "help": "GTM custom reactive event name for \"Ad Storage\". Default name: \"reactiveAdOn\". You need to configure a \"Custom Event\" trigger using the same event name.",
+            "defaultValue": "reactiveAdOn",
+            "enablingConditions": [
+              {
+                "paramName": "activateAdEvent",
+                "paramValue": true,
+                "type": "EQUALS"
+              }
+            ]
+          },
+          {
+            "type": "CHECKBOX",
+            "name": "activateAnalyticsEvent",
+            "checkboxText": "Activate \"Analytics Storage\" Reactive Event",
+            "simpleValueType": true
+          },
+          {
+            "type": "TEXT",
+            "name": "analyticsEventName",
+            "displayName": "Analytics Storage Event Name:",
+            "simpleValueType": true,
+            "help": "GTM custom reactive event name for \"Analytics Storage\". Default name: \"reactiveAnalyticsOn\". You need to configure a \"Custom Event\" trigger using the same event name.",
+            "defaultValue": "reactiveAnalyticsOn",
+            "enablingConditions": [
+              {
+                "paramName": "activateAnalyticsEvent",
+                "paramValue": true,
+                "type": "EQUALS"
+              }
+            ]
+          },
+          {
+            "type": "CHECKBOX",
+            "name": "activateFunctionalityEvent",
+            "checkboxText": "Activate \"Functionality Storage\" Reactive Event",
+            "simpleValueType": true
+          },
+          {
+            "type": "TEXT",
+            "name": "functionalityEventName",
+            "displayName": "Functionality Storage Event Name:",
+            "simpleValueType": true,
+            "help": "GTM custom reactive event name for \"Functionality Storage\". Default name: \"reactiveFunctionalityOn\". You need to configure a \"Custom Event\" trigger using the same event name.",
+            "defaultValue": "reactiveFunctionalityOn",
+            "enablingConditions": [
+              {
+                "paramName": "activateFunctionalityEvent",
+                "paramValue": true,
+                "type": "EQUALS"
+              }
+            ]
+          },
+          {
+            "type": "CHECKBOX",
+            "name": "activatePersonalizationEvent",
+            "checkboxText": "Activate \"Personalization Storage\" Reactive Event",
+            "simpleValueType": true
+          },
+          {
+            "type": "TEXT",
+            "name": "personalizationEventName",
+            "displayName": "Personalization Storage Event Name:",
+            "simpleValueType": true,
+            "help": "GTM custom reactive event name for \"Personalization Storage\". Default name: \"reactivePersonalizationOn\". You need to configure a \"Custom Event\" trigger using the same event name.",
+            "defaultValue": "reactivePersonalizationOn",
+            "enablingConditions": [
+              {
+                "paramName": "activatePersonalizationEvent",
+                "paramValue": true,
+                "type": "EQUALS"
+              }
+            ]
+          },
+          {
+            "type": "CHECKBOX",
+            "name": "activateSecurityEvent",
+            "checkboxText": "Activate \"Security Storage\" Reactive Event",
+            "simpleValueType": true
+          },
+          {
+            "type": "TEXT",
+            "name": "securityEventName",
+            "displayName": "Security Storage Event Name:",
+            "simpleValueType": true,
+            "help": "GTM custom reactive event name for \"Security Storage\". Default name: \"reactiveSecurityOn\". You need to configure a \"Custom Event\" trigger using the same event name.",
+            "defaultValue": "reactiveSecurityOn",
+            "enablingConditions": [
+              {
+                "paramName": "activateSecurityEvent",
+                "paramValue": true,
+                "type": "EQUALS"
+              }
+            ]
+          }
+        ],
+        "enablingConditions": [
+          {
+            "paramName": "activateReactiveEvents",
+            "paramValue": true,
+            "type": "EQUALS"
+          }
+        ]
       }
     ],
     "enablingConditions": [
       {
         "paramName": "advancedFeatures",
-        "paramValue": true,
-        "type": "EQUALS"
-      }
-    ]
-  },
-  {
-    "type": "GROUP",
-    "name": "reactiveEventGroup",
-    "displayName": "Reactive Events",
-    "groupStyle": "ZIPPY_OPEN",
-    "subParams": [
-      {
-        "type": "CHECKBOX",
-        "name": "activateAdEvent",
-        "checkboxText": "Activate \"Ad Storage\" Reactive Event",
-        "simpleValueType": true
-      },
-      {
-        "type": "TEXT",
-        "name": "adEventName",
-        "displayName": "Ad Storage Event Name:",
-        "simpleValueType": true,
-        "help": "GTM custom reactive event name for \"Ad Storage\". Default name: \"reactiveAdOn\". You need to configure a \"Custom Event\" trigger using the same event name.",
-        "defaultValue": "reactiveAdOn",
-        "enablingConditions": [
-          {
-            "paramName": "activateAdEvent",
-            "paramValue": true,
-            "type": "EQUALS"
-          }
-        ]
-      },
-      {
-        "type": "CHECKBOX",
-        "name": "activateAnalyticsEvent",
-        "checkboxText": "Activate \"Analytics Storage\" Reactive Event",
-        "simpleValueType": true
-      },
-      {
-        "type": "TEXT",
-        "name": "analyticsEventName",
-        "displayName": "Analytics Storage Event Name:",
-        "simpleValueType": true,
-        "help": "GTM custom reactive event name for \"Analytics Storage\". Default name: \"reactiveAnalyticsOn\". You need to configure a \"Custom Event\" trigger using the same event name.",
-        "defaultValue": "reactiveAnalyticsOn",
-        "enablingConditions": [
-          {
-            "paramName": "activateAnalyticsEvent",
-            "paramValue": true,
-            "type": "EQUALS"
-          }
-        ]
-      },
-      {
-        "type": "CHECKBOX",
-        "name": "activateFunctionalityEvent",
-        "checkboxText": "Activate \"Functionality Storage\" Reactive Event",
-        "simpleValueType": true
-      },
-      {
-        "type": "TEXT",
-        "name": "functionalityEventName",
-        "displayName": "Functionality Storage Event Name:",
-        "simpleValueType": true,
-        "help": "GTM custom reactive event name for \"Functionality Storage\". Default name: \"reactiveFunctionalityOn\". You need to configure a \"Custom Event\" trigger using the same event name.",
-        "defaultValue": "reactiveFunctionalityOn",
-        "enablingConditions": [
-          {
-            "paramName": "activateFunctionalityEvent",
-            "paramValue": true,
-            "type": "EQUALS"
-          }
-        ]
-      },
-      {
-        "type": "CHECKBOX",
-        "name": "activatePersonalizationEvent",
-        "checkboxText": "Activate \"Personalization Storage\" Reactive Event",
-        "simpleValueType": true
-      },
-      {
-        "type": "TEXT",
-        "name": "personalizationEventName",
-        "displayName": "Personalization Storage Event Name:",
-        "simpleValueType": true,
-        "help": "GTM custom reactive event name for \"Personalization Storage\". Default name: \"reactivePersonalizationOn\". You need to configure a \"Custom Event\" trigger using the same event name.",
-        "defaultValue": "reactivePersonalizationOn",
-        "enablingConditions": [
-          {
-            "paramName": "activatePersonalizationEvent",
-            "paramValue": true,
-            "type": "EQUALS"
-          }
-        ]
-      },
-      {
-        "type": "CHECKBOX",
-        "name": "activateSecurityEvent",
-        "checkboxText": "Activate \"Security Storage\" Reactive Event",
-        "simpleValueType": true
-      },
-      {
-        "type": "TEXT",
-        "name": "securityEventName",
-        "displayName": "Security Storage Event Name:",
-        "simpleValueType": true,
-        "help": "GTM custom reactive event name for \"Security Storage\". Default name: \"reactiveSecurityOn\". You need to configure a \"Custom Event\" trigger using the same event name.",
-        "defaultValue": "reactiveSecurityOn",
-        "enablingConditions": [
-          {
-            "paramName": "activateSecurityEvent",
-            "paramValue": true,
-            "type": "EQUALS"
-          }
-        ]
-      }
-    ],
-    "enablingConditions": [
-      {
-        "paramName": "activateReactiveEvents",
         "paramValue": true,
         "type": "EQUALS"
       }
@@ -332,36 +539,100 @@ ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 const createArgumentsQueue = require('createArgumentsQueue');
 const setDefaultConsentState = require('setDefaultConsentState');
 const updateConsentState = require('updateConsentState');
+const queryPermission = require('queryPermission');
+const injectScript = require('injectScript');
 const logToConsole = require('logToConsole');
 const makeInteger = require('makeInteger');
 const createQueue = require('createQueue');
+const gtagSet = require('gtagSet');
+const JSON = require('JSON');
 
-const gtag = createArgumentsQueue('gtag', 'dataLayer');
-gtag('set', 'developer_id.dOWVhY2', true);
+if (data.advancedFeatures && data.injectCmpJsFlag && data.injectCmpJsFullUrl) {
+  if (queryPermission('inject_script', data.injectCmpJsFullUrl)) {
+    logToConsole('Injecting CMP Script...');
+    injectScript(data.injectCmpJsFullUrl, onSuccess, data.gtmOnFailure, data.injectCmpJsFullUrl);
+  } else {
+    logToConsole('ERROR | Script load failed due to permissions mismatch.');
+  }
+}
+function onSuccess() {
+  logToConsole('CMP Script successfully loaded!');
+}
+
+gtagSet('developer_id.dOWVhY2', true);
 if (data.enableUrlPassthrough) {
-  gtag('set', 'url_passthrough', true);
+  gtagSet('url_passthrough', true);
   logToConsole("Commanders Act | OnSite API: Url Passthrough set to TRUE");
 }
 if (data.enableAdsDataRedaction) {
-  gtag('set', 'ads_data_redaction', true);
+  gtagSet('ads_data_redaction', true);
   logToConsole("Commanders Act | OnSite API: Ads Data Redaction set to TRUE");
 }
 
-// Default settings via "setDefaultConsentState" API
-logToConsole("Firing default command...");
-setDefaultConsentState({
-    'ad_storage': data.rdDefAd,
-    'analytics_storage': data.rdDefAnalytics,
-    'functionality_storage': data.rdDefFunctionality,
-    'personalization_storage': data.rdDefPersonalization,
-    'security_storage': data.rdDefSecurity,
-    'wait_for_update': (typeof data.waitforUpdate !== "undefined") ? makeInteger(data.waitforUpdate) : 0
-});
+function setDefaultConsentByRegion(defaultTable, storageType) {
+  let regionDenied = [], regionGranted = [];
+  if (defaultTable) {
+    for (let i = 0; i < defaultTable.length; i++) {
+      if (defaultTable[i].default_consent === "denied") {
+        // Consent denied branch...
+        if (defaultTable[i].region !== "") {
+          regionDenied.push(defaultTable[i].region);
+        } else {
+          //No input region: send a "setDefaultConsentState" for all regions.
+          logToConsole("Default Consent State | " + storageType + " | regionDenied: ALL");
+          let consentSettings = {};
+          consentSettings[storageType] = "denied";
+          consentSettings.wait_for_update = (typeof data.waitforUpdate !== "undefined") ? makeInteger(data.waitforUpdate) : 0;
+          setDefaultConsentState(consentSettings);
+        }
+      } else if (defaultTable[i].default_consent === "granted") {
+        // Consent granted branch...
+        if (defaultTable[i].region !== "") {
+          regionGranted.push(defaultTable[i].region);
+        } else {
+          //No input region: send a "setDefaultConsentState" for all regions.
+          logToConsole("Default Consent State | " + storageType + " | regionGranted: ALL");
+          let consentSettings = {};
+          consentSettings[storageType] = "granted";
+          consentSettings.wait_for_update = (typeof data.waitforUpdate !== "undefined") ? makeInteger(data.waitforUpdate) : 0;
+          setDefaultConsentState(consentSettings);
+        }
+      }
+    }
+    if (regionDenied.length > 0) {
+      let consentSettings = {};
+      consentSettings[storageType] = "denied";
+      consentSettings.region = regionDenied;
+      consentSettings.wait_for_update = (typeof data.waitforUpdate !== "undefined") ? makeInteger(data.waitforUpdate) : 0;
+      setDefaultConsentState(consentSettings);
+      logToConsole("Default Consent State | " + storageType + " | regionDenied:" + regionDenied.toString());
+    }
+    if (regionGranted.length > 0) {
+      let consentSettings = {};
+      consentSettings[storageType] = "granted";
+      consentSettings.region = regionGranted;
+      consentSettings.wait_for_update = (typeof data.waitforUpdate !== "undefined") ? makeInteger(data.waitforUpdate) : 0;
+      setDefaultConsentState(consentSettings);
+      logToConsole("Default Consent State | " +storageType + " | regionGranted: " + regionGranted.toString());
+    }
+  }
+}
 
-// Ensure CA Stub is initialized via "createArgumentsQueue" API
-var cact = createArgumentsQueue('cact', 'caReady');
+if (!data.disableDefaultConsent) {
+  // Default settings via "setDefaultConsentState" API.
+  logToConsole("Firing default command(s)...");
+    
+  setDefaultConsentByRegion(data.defaultAdStorageTable, "ad_storage");
+  setDefaultConsentByRegion(data.defaultAnalyticsStorageTable, "analytics_storage");
+  setDefaultConsentByRegion(data.defaultFunctionalityStorageTable, "functionality_storage");
+  setDefaultConsentByRegion(data.defaultPersonalizationStorageTable, "personalization_storage");
+  setDefaultConsentByRegion(data.defaultSecurityStorageTable, "security_storage");
+}
+
+// CA Stub is initialized via "createArgumentsQueue" API
+const cact = createArgumentsQueue('cact', 'caReady');
 logToConsole("CA Stub initialized...");
-var caPrevConsent = "";
+let caPrevConsent = "";
 
 function setConsentUpdateCommand (result) {
     const adObj = result.consent.categories[data.caTrustAdStorageCatId] || {};
@@ -369,7 +640,7 @@ function setConsentUpdateCommand (result) {
     const functionalityObj = result.consent.categories[data.caTrustFunctionalityStorageCatId] || {};
     const personalizationObj = result.consent.categories[data.caTrustPersonalizationStorageCatId] || {};
     const securityObj = result.consent.categories[data.caTrustSecurityStorageCatId] || {};
-    var adStatus = "", analyticsStatus = "", functionalityStatus = "", personalizationStatus = "", securityStatus = "";
+    let adStatus = "", analyticsStatus = "", functionalityStatus = "", personalizationStatus = "", securityStatus = "";
     if (adObj.status === 'on') {
         logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: " + data.caTrustAdStorageCatId + " is granted!");
         adStatus = "granted";
@@ -871,45 +1142,66 @@ ___WEB_PERMISSIONS___
                     "boolean": true
                   }
                 ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "clientAnnotations": {
+      "isEditedByUser": true
+    },
+    "isRequired": true
+  },
+  {
+    "instance": {
+      "key": {
+        "publicId": "inject_script",
+        "versionId": "1"
+      },
+      "param": [
+        {
+          "key": "urls",
+          "value": {
+            "type": 2,
+            "listItem": [
+              {
+                "type": 1,
+                "string": "https://cdn.trustcommander.net/*"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "clientAnnotations": {
+      "isEditedByUser": true
+    },
+    "isRequired": true
+  },
+  {
+    "instance": {
+      "key": {
+        "publicId": "write_data_layer",
+        "versionId": "1"
+      },
+      "param": [
+        {
+          "key": "keyPatterns",
+          "value": {
+            "type": 2,
+            "listItem": [
+              {
+                "type": 1,
+                "string": "developer_id.dOWVhY2"
               },
               {
-                "type": 3,
-                "mapKey": [
-                  {
-                    "type": 1,
-                    "string": "key"
-                  },
-                  {
-                    "type": 1,
-                    "string": "read"
-                  },
-                  {
-                    "type": 1,
-                    "string": "write"
-                  },
-                  {
-                    "type": 1,
-                    "string": "execute"
-                  }
-                ],
-                "mapValue": [
-                  {
-                    "type": 1,
-                    "string": "gtag"
-                  },
-                  {
-                    "type": 8,
-                    "boolean": true
-                  },
-                  {
-                    "type": 8,
-                    "boolean": true
-                  },
-                  {
-                    "type": 8,
-                    "boolean": true
-                  }
-                ]
+                "type": 1,
+                "string": "url_passthrough"
+              },
+              {
+                "type": 1,
+                "string": "ads_data_redaction"
               }
             ]
           }

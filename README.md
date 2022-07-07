@@ -1,4 +1,4 @@
-# ![TagCo logo](/Screenshots/tag.png) OnSite CMP API
+# ![TagCo logo](/Screenshots/logo.png) OnSite CMP API
 ## Overview
 A GTM template using "Commanders Act" OnSite CMP API (https://community.commandersact.com/trustcommander/onsite-api/getting-started) to manage "Consent Mode".
 
