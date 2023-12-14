@@ -627,6 +627,8 @@ if (!data.disableDefaultConsent) {
   setDefaultConsentByRegion(data.defaultFunctionalityStorageTable, "functionality_storage");
   setDefaultConsentByRegion(data.defaultPersonalizationStorageTable, "personalization_storage");
   setDefaultConsentByRegion(data.defaultSecurityStorageTable, "security_storage");
+  setDefaultConsentByRegion(data.defaultAnalyticsStorageTable, "ad_user_data");
+  setDefaultConsentByRegion(data.defaultAnalyticsStorageTable, "ad_personalization");
 }
 
 // CA Stub is initialized via "createArgumentsQueue" API
@@ -640,7 +642,7 @@ function setConsentUpdateCommand (result) {
     const functionalityObj = result.consent.categories[data.caTrustFunctionalityStorageCatId] || {};
     const personalizationObj = result.consent.categories[data.caTrustPersonalizationStorageCatId] || {};
     const securityObj = result.consent.categories[data.caTrustSecurityStorageCatId] || {};
-    let adStatus = "", analyticsStatus = "", functionalityStatus = "", personalizationStatus = "", securityStatus = "";
+    let adStatus = "", analyticsStatus = "", functionalityStatus = "", personalizationStatus = "", securityStatus = "", adPersonalizationStatus = "", aduserDataStatus = "" ;
     if (adObj.status === 'on') {
         logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: " + data.caTrustAdStorageCatId + " is granted!");
         adStatus = "granted";
@@ -676,6 +678,20 @@ function setConsentUpdateCommand (result) {
         logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: " + data.caTrustSecurityStorageCatId + " is denied!");
         securityStatus = "denied";
     }
+    if (adObj.status === 'on') {
+        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: " + data.caTrustadPersonalizationStatusCatId + " is granted!");
+        adPersonalizationStatus = "granted";
+    } else if (adObj.status === 'off') {
+        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: " + data.caTrustadPersonalizationStatusCatId + " is denied!");
+        adPersonalizationStatus = "denied";
+    }
+    if (adObj.status === 'on') {
+        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: " + data.caTrustaduserDataStatusCatId + " is granted!");
+        aduserDataStatus = "granted";
+    } else if (adObj.status === 'off') {
+        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: " + data.caTrustaduserDataStatusCatId + " is denied!");
+        aduserDataStatus = "denied";
+    }
     logToConsole("Firing update command...");
     updateConsentState({
         'ad_storage': adStatus,
@@ -683,6 +699,8 @@ function setConsentUpdateCommand (result) {
         'functionality_storage': functionalityStatus,
         'personalization_storage': personalizationStatus,
         'security_storage': securityStatus,
+        'ad_personalization': adPersonalizationStatus,
+        'ad_user_data': aduserDataStatus,
         'wait_for_update': (typeof data.waitforUpdate !== "undefined") ? makeInteger(data.waitforUpdate) : 0
     });
     if (data.advancedSettings && data.activateReactiveEvents) {
@@ -982,6 +1000,68 @@ ___WEB_PERMISSIONS___
                     "boolean": true
                   }
                 ]
+               },
+              {
+              "type": 3,
+                "mapKey": [
+                  {
+                    "type": 1,
+                    "string": "consentType"
+                  },
+                  {
+                    "type": 1,
+                    "string": "read"
+                  },
+                  {
+                    "type": 1,
+                    "string": "write"
+                  }
+                ],
+                "mapValue": [
+                  {
+                    "type": 1,
+                    "string": "ad_personalization"
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  }
+                ]
+              },
+              {
+                "type": 3,
+                "mapKey": [
+                  {
+                    "type": 1,
+                    "string": "consentType"
+                  },
+                  {
+                    "type": 1,
+                    "string": "read"
+                  },
+                  {
+                    "type": 1,
+                    "string": "write"
+                  }
+                ],
+                "mapValue": [
+                  {
+                    "type": 1,
+                    "string": "ad_user_data"
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  }
+                ]             
               }
             ]
           }
