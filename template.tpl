@@ -5,7 +5,7 @@
   "id": "cvt_temp_public_id",
   "version": 1,
   "securityGroups": [],
-  "displayName": "Commanders Act | Google Consent Mode",
+  "displayName": "Commanders Act CMP",
   "brand": {
     "id": "brand_dummy",
     "displayName": "",
