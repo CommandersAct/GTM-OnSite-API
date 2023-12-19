@@ -15,6 +15,8 @@
 homepage: "https://www.commandersact.com"
 documentation: "https://community.commandersact.com/trustcommander/setup-guides/tag-manager/consent-mode-in-gtm"
 versions:
+  - sha: 02d94299e1fd8d9feeb7cfbb4a438659bd93b30c
+    changeNotes: Updated name and logo.
   - sha: 8714801df9d30eb2fbc3efa611327997cb29a020
     changeNotes: Added support for ad_user_data and ad_personalization fields
   - sha: 553da525e1c900d4a170410acf0eb1e053f50a79
