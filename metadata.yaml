@@ -13,7 +13,7 @@
 # limitations under the License.
 
 homepage: "https://www.commandersact.com"
-documentation: "https://community.commandersact.com/trustcommander/setup-guides/tag-manager/consent-mode-in-gtm"
+documentation: "https://doc.commandersact.com/features/consent-management/setup-guides/tag-manager/google-tag-manager-gtm-consent-mode"
 versions:
   - sha: 24f61468d632073649cb6df692eb9938713a1937
     changeNotes: Added terms of service.
