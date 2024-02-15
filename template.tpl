@@ -11,9 +11,9 @@ ___INFO___
 {
   "type": "TAG",
   "id": "cvt_temp_public_id",
-  "version": 2,
+  "version": 1,
   "securityGroups": [],
-  "displayName": "Commanders Act | OnSite CMP API",
+  "displayName": "Commanders Act CMP",
   "brand": {
     "id": "github.com_CommandersAct",
     "displayName": "CommandersAct",
@@ -32,7 +32,7 @@ ___TEMPLATE_PARAMETERS___
   {
     "type": "TEXT",
     "name": "caTrustAdStorageCatId",
-    "displayName": "Consent Category Id for \"Ad Storage\"",
+    "displayName": "Consent category Id for \"Ad Storage\"",
     "simpleValueType": true,
     "help": "Log in into \"Commanders Act\" interface and locate the area \"Data Governance\" → \"Consent Management\" → \"Categories\". Input the category Id (E.g. 1) associated to \"Ad Storage\". More details are available by following this \u003ca href\u003d\"https://doc.commandersact.com/features/consent-management/user-guides/categories-and-tags/manage-categories\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
   },
@@ -56,26 +56,25 @@ ___TEMPLATE_PARAMETERS___
     "displayName": "Consent category Id for \"Personalization Storage\"",
     "simpleValueType": true,
     "help": "Log in into \"Commanders Act\" interface and locate the area \"Data Governance\" → \"Consent Management\" → \"Categories\". Input the category Id (E.g. 1) associated to \"Personalization Storage\". More details are available by following this \u003ca href\u003d\"https://doc.commandersact.com/features/consent-management/user-guides/categories-and-tags/manage-categories\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
- },
+  },
   {
     "type": "TEXT",
     "name": "caTrustSecurityStorageCatId",
     "displayName": "Consent category Id for \"Security Storage\"",
     "simpleValueType": true,
-    "simpleValueType": true,
     "help": "Log in into \"Commanders Act\" interface and locate the area \"Data Governance\" → \"Consent Management\" → \"Categories\". Input the category Id (E.g. 1) associated to \"Security Storage\". More details are available by following this \u003ca href\u003d\"https://doc.commandersact.com/features/consent-management/user-guides/categories-and-tags/manage-categories\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
   },
-   {
+  {
     "type": "TEXT",
     "name": "caTrustAdUserDataCatId",
-    "displayName": "Consent Category Id for \"Ad User Data\"",
+    "displayName": "Consent category Id for \"Ad User Data\"",
     "simpleValueType": true,
     "help": "Log in into \"Commanders Act\" interface and locate the area \"Data Governance\" → \"Consent Management\" → \"Categories\". Input the category Id (E.g. 1) associated to \"Ad User Data\". More details are available by following this \u003ca href\u003d\"https://doc.commandersact.com/features/consent-management/user-guides/categories-and-tags/manage-categories\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
   },
   {
     "type": "TEXT",
     "name": "caTrustAdPersonalizationCatId",
-    "displayName": "Consent Category Id for \"Ad Personalization\"",
+    "displayName": "Consent category Id for \"Ad Personalization\"",
     "simpleValueType": true,
     "help": "Log in into \"Commanders Act\" interface and locate the area \"Data Governance\" → \"Consent Management\" → \"Categories\". Input the category Id (E.g. 1) associated to \"Ad Personalization\". More details are available by following this \u003ca href\u003d\"https://doc.commandersact.com/features/consent-management/user-guides/categories-and-tags/manage-categories\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
   },
@@ -536,7 +535,7 @@ ___TEMPLATE_PARAMETERS___
             "name": "adEventName",
             "displayName": "Ad Storage Event Name:",
             "simpleValueType": true,
-            "help": "GTM custom reactive event name for \"Ad Storage\". Default name: \"reactiveAdOn\". You need to configure a \"Custom Event\" trigger using the same event name.",
+            "help": "GTM custom reactive event name for \"Ad Storage\". Default name: \"reactive_ad_on\". You need to configure a \"Custom Event\" trigger using the same event name.",
             "defaultValue": "reactive_ad_on",
             "enablingConditions": [
               {
@@ -557,7 +556,7 @@ ___TEMPLATE_PARAMETERS___
             "name": "analyticsEventName",
             "displayName": "Analytics Storage Event Name:",
             "simpleValueType": true,
-            "help": "GTM custom reactive event name for \"Analytics Storage\". Default name: \"reactiveAnalyticsOn\". You need to configure a \"Custom Event\" trigger using the same event name.",
+            "help": "GTM custom reactive event name for \"Analytics Storage\". Default name: \"reactive_analytics_on\". You need to configure a \"Custom Event\" trigger using the same event name.",
             "defaultValue": "reactive_analytics_on",
             "enablingConditions": [
               {
@@ -578,7 +577,7 @@ ___TEMPLATE_PARAMETERS___
             "name": "functionalityEventName",
             "displayName": "Functionality Storage Event Name:",
             "simpleValueType": true,
-            "help": "GTM custom reactive event name for \"Functionality Storage\". Default name: \"reactiveFunctionalityOn\". You need to configure a \"Custom Event\" trigger using the same event name.",
+            "help": "GTM custom reactive event name for \"Functionality Storage\". Default name: \"reactive_functionality_on\". You need to configure a \"Custom Event\" trigger using the same event name.",
             "defaultValue": "reactive_functionality_on",
             "enablingConditions": [
               {
@@ -599,7 +598,7 @@ ___TEMPLATE_PARAMETERS___
             "name": "personalizationEventName",
             "displayName": "Personalization Storage Event Name:",
             "simpleValueType": true,
-            "help": "GTM custom reactive event name for \"Personalization Storage\". Default name: \"reactivePersonalizationOn\". You need to configure a \"Custom Event\" trigger using the same event name.",
+            "help": "GTM custom reactive event name for \"Personalization Storage\". Default name: \"reactive_personalization_on\". You need to configure a \"Custom Event\" trigger using the same event name.",
             "defaultValue": "reactive_personalization_on",
             "enablingConditions": [
               {
@@ -620,7 +619,7 @@ ___TEMPLATE_PARAMETERS___
             "name": "securityEventName",
             "displayName": "Security Storage Event Name:",
             "simpleValueType": true,
-            "help": "GTM custom reactive event name for \"Security Storage\". Default name: \"reactiveSecurityOn\". You need to configure a \"Custom Event\" trigger using the same event name.",
+            "help": "GTM custom reactive event name for \"Security Storage\". Default name: \"reactive_security_on\". You need to configure a \"Custom Event\" trigger using the same event name.",
             "defaultValue": "reactive_security_on",
             "enablingConditions": [
               {
@@ -641,7 +640,7 @@ ___TEMPLATE_PARAMETERS___
             "name": "adUserDataEventName",
             "displayName": "Ad User Data Event Name:",
             "simpleValueType": true,
-            "help": "GTM custom reactive event name for \"Ad User Data\". Default name: \"reactiveAdUserDataOn\". You need to configure a \"Custom Event\" trigger using the same event name.",
+            "help": "GTM custom reactive event name for \"Ad User Data\". Default name: \"reactive_ad_user_data_on\". You need to configure a \"Custom Event\" trigger using the same event name.",
             "defaultValue": "reactive_ad_user_data_on",
             "enablingConditions": [
               {
@@ -662,7 +661,7 @@ ___TEMPLATE_PARAMETERS___
             "name": "adPersonalizationEventName",
             "displayName": "Ad Personalization Event Name:",
             "simpleValueType": true,
-            "help": "GTM custom reactive event name for \"Ad Personalization\". Default name: \"reactiveAdPersonalizationOn\". You need to configure a \"Custom Event\" trigger using the same event name.",
+            "help": "GTM custom reactive event name for \"Ad Personalization\". Default name: \"reactive_ad_personalization_on\". You need to configure a \"Custom Event\" trigger using the same event name.",
             "defaultValue": "reactive_ad_personalization_on",
             "enablingConditions": [
               {
@@ -680,11 +679,11 @@ ___TEMPLATE_PARAMETERS___
           },
           {
             "type": "TEXT",
-            "name": "GlobalConsent",
-            "displayName": "Global consent:",
+            "name": "globalConsentEventName",
+            "displayName": "Global Consent Event Name:",
             "simpleValueType": true,
-            "help": "GTM custom reactive event name for \"Global consent\". Default name: \"reactiveFunctionalityOn\". You need to configure a \"Custom Event\" trigger using the same event name.",
-            "defaultValue": "global_consent_action",
+            "help": "GTM custom reactive event name for \"Global consent\". Default name: \"reactive_global_consent_on\". You need to configure a \"Custom Event\" trigger using the same event name.",
+            "defaultValue": "reactive_global_consent_on",
             "enablingConditions": [
               {
                 "paramName": "activateGlobalConsentEvent",
@@ -923,9 +922,9 @@ function setConsentUpdateCommand (result) {
           'event': data.adPersonalizationEventName
         });
       }
-      if (data.activateGlobalConsentEvent) {
+      if (data.globalConsentEventName) {
         dataLayerPush({
-          'event': data.activateGlobalConsentEvent
+          'event': data.globalConsentEventName
         });
       }
     }
@@ -943,18 +942,10 @@ cact('consent.get', function (result) {
 cact('consent.onUpdate', function (result) {
   logToConsole("Commanders Act | OnSite API: consent.onUpdate");
   logToConsole("result: ", result);
-  const dataLayerPush = createQueue('dataLayer');
-   
   setConsentUpdateCommand(result);
  
-  logToConsole("Commanders Act | Notify GTM that 'Consent Update' has happended...");
-        dataLayerPush({
-          'event': data.globalConsentEventName
-        });
-
-
   if (data.advancedFeatures && data.activateReactiveEvents) {
-    
+    const dataLayerPush = createQueue('dataLayer');
     if (data.activateAdEvent) {
       if ((caPrevConsent.consent.categories[data.caTrustAdStorageCatId].status !== "on") && 
           (result.consent.categories[data.caTrustAdStorageCatId].status === "on")) {
@@ -1000,7 +991,6 @@ cact('consent.onUpdate', function (result) {
         });
       }
     }
-
     if (data.activateAdUserDataEvent) {
       if ((caPrevConsent.consent.categories[data.caTrustAdUserDataCatId].status !== "on") && 
           (result.consent.categories[data.caTrustAdUserDataCatId].status === "on")) {
@@ -1011,20 +1001,20 @@ cact('consent.onUpdate', function (result) {
       }
     }
     if (data.activateAdPersonalizationEvent) {
-      if ((caPrevConsent.consent.categories[data.caTrustAdPersonalizationCatId].status !== "on") && 
-          (result.consent.categories[data.caTrustAdPersonalizationCatId].status === "on")) {
-        logToConsole("Commanders Act | Notify GTM that 'Ad Personalization' is now on (was off)...");
-        dataLayerPush({
-          'event': data.adPersonalizationEventName
-        });
-      }
+        if ((caPrevConsent.consent.categories[data.caTrustAdPersonalizationCatId].status !== "on") &&
+            (result.consent.categories[data.caTrustAdPersonalizationCatId].status === "on")) {
+            logToConsole("Commanders Act | Notify GTM that 'Ad Personalization' is now on (was off)...");
+            dataLayerPush({
+                'event': data.adPersonalizationEventName
+            });
+        }
     }
-      if (data.activateGlobalConsentEvent) {
-        logToConsole("Commanders Act | Notify GTM that 'a consent action has been done')...");
+    if (data.activateGlobalConsentEvent) {
+        logToConsole("Commanders Act | Notify GTM that a global consent action has been done...");
         dataLayerPush({
-          'event': data.activateGlobalConsentEvent
+            'event': data.globalConsentEventName
         });
-      }
+    }
   }
 });
 
@@ -1232,7 +1222,6 @@ ___WEB_PERMISSIONS___
                   }
                 ]
               },
-
               {
                 "type": 3,
                 "mapKey": [
