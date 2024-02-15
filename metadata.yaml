@@ -15,6 +15,8 @@
 homepage: "https://www.commandersact.com"
 documentation: "https://doc.commandersact.com/features/consent-management/setup-guides/tag-manager/google-tag-manager-gtm-consent-mode"
 versions:
+  - sha: 5a2e255b3438f0565cda42175a8ce7a21f7bed46
+    changeNotes: Added "Global Consent" event and misc.
   - sha: 24f61468d632073649cb6df692eb9938713a1937
     changeNotes: Added terms of service.
   - sha: 8a43b7ea5955ea1e62d05e62d6570489b8e6f69e
