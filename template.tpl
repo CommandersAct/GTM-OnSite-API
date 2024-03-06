@@ -526,6 +526,13 @@ ___TEMPLATE_PARAMETERS___
         "subParams": [
           {
             "type": "CHECKBOX",
+            "name": "onlyOnConsentUpdate",
+            "checkboxText": "On Consent Update Only",
+            "simpleValueType": true,
+            "help": "When flagged, \"Reactive Events\" will trigger ONLY when user interacts with the banner to confirm consent choices."
+          },
+          {
+            "type": "CHECKBOX",
             "name": "activateAdEvent",
             "checkboxText": "Activate \"Ad Storage\" Reactive Event",
             "simpleValueType": true
@@ -885,56 +892,62 @@ function setConsentUpdateCommand (result) {
         'ad_personalization': adPersonalizationStatus,
         'wait_for_update': (typeof data.waitforUpdate !== "undefined") ? makeInteger(data.waitforUpdate) : 0
     });
+}
+
+function reactiveEventPush() {
     if (data.advancedFeatures && data.activateReactiveEvents) {
-      const dataLayerPush = createQueue('dataLayer');
-      if (data.activateAdEvent) {
-        dataLayerPush({
-          'event': data.adEventName
-        });
-      }
-      if (data.analyticsEventName) {
-        dataLayerPush({
-          'event': data.analyticsEventName
-        });
-      }
-      if (data.functionalityEventName) {
-        dataLayerPush({
-          'event': data.functionalityEventName
-        });
-      }
-      if (data.personalizationEventName) {
-        dataLayerPush({
-          'event': data.personalizationEventName
-        });
-      }
-      if (data.securityEventName) {
-        dataLayerPush({
-          'event': data.securityEventName
-        });
-      }
-      if (data.adUserDataEventName) {
-        dataLayerPush({
-          'event': data.adUserDataEventName
-        });
-      }
-      if (data.adPersonalizationEventName) {
-        dataLayerPush({
-          'event': data.adPersonalizationEventName
-        });
-      }
-      if (data.globalConsentEventName) {
-        dataLayerPush({
-          'event': data.globalConsentEventName
-        });
-      }
+        const dataLayerPush = createQueue('dataLayer');
+        if (data.activateAdEvent) {
+            dataLayerPush({
+                'event': data.adEventName
+            });
+        }
+        if (data.analyticsEventName) {
+            dataLayerPush({
+                'event': data.analyticsEventName
+            });
+        }
+        if (data.functionalityEventName) {
+            dataLayerPush({
+                'event': data.functionalityEventName
+            });
+        }
+        if (data.personalizationEventName) {
+            dataLayerPush({
+                'event': data.personalizationEventName
+            });
+        }
+        if (data.securityEventName) {
+            dataLayerPush({
+                'event': data.securityEventName
+            });
+        }
+        if (data.adUserDataEventName) {
+            dataLayerPush({
+                'event': data.adUserDataEventName
+            });
+        }
+        if (data.adPersonalizationEventName) {
+            dataLayerPush({
+                'event': data.adPersonalizationEventName
+            });
+        }
+        if (data.globalConsentEventName) {
+            dataLayerPush({
+                'event': data.globalConsentEventName
+            });
+        }
     }
 }
 
 cact('consent.get', function (result) {
-	logToConsole("Commanders Act | OnSite API: consent.get");
+    logToConsole("Commanders Act | OnSite API: consent.get");
     logToConsole("result: ", result);
     if (result.consent.status !== "unset") {
         setConsentUpdateCommand(result);
+        if (typeof data.onlyOnConsentUpdate === 'undefined' || (typeof data.onlyOnConsentUpdate !== 'undefined' && data.onlyOnConsentUpdate === false)) {
+            reactiveEventPush();
+        }
     }
     caPrevConsent = result;
 });
@@ -943,6 +956,7 @@ cact('consent.onUpdate', function (result) {
   logToConsole("Commanders Act | OnSite API: consent.onUpdate");
   logToConsole("result: ", result);
   setConsentUpdateCommand(result);
+  reactiveEventPush();
 });
 
 data.gtmOnSuccess();
