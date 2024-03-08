@@ -722,18 +722,20 @@ ___TEMPLATE_PARAMETERS___
 
 ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 
-const createArgumentsQueue = require('createArgumentsQueue');
 const setDefaultConsentState = require('setDefaultConsentState');
+const createArgumentsQueue = require('createArgumentsQueue');
 const updateConsentState = require('updateConsentState');
 const queryPermission = require('queryPermission');
 const injectScript = require('injectScript');
 const logToConsole = require('logToConsole');
+const setInWindow = require('setInWindow');
 const makeInteger = require('makeInteger');
 const createQueue = require('createQueue');
 const gtagSet = require('gtagSet');
 const JSON = require('JSON');
 
 if (data.advancedFeatures && data.injectCmpJsFlag && data.injectCmpJsFullUrl) {
+  setInWindow('tCPrivacyTagManager', 'gtm', true);
   if (queryPermission('inject_script', data.injectCmpJsFullUrl)) {
     logToConsole('Injecting CMP Script...');
     injectScript(data.injectCmpJsFullUrl, onSuccess, data.gtmOnFailure, data.injectCmpJsFullUrl);
@@ -1382,6 +1384,45 @@ ___WEB_PERMISSIONS___
                   {
                     "type": 8,
                     "boolean": true
+                  }
+                ]
+              },
+              {
+                "type": 3,
+                "mapKey": [
+                  {
+                    "type": 1,
+                    "string": "key"
+                  },
+                  {
+                    "type": 1,
+                    "string": "read"
+                  },
+                  {
+                    "type": 1,
+                    "string": "write"
+                  },
+                  {
+                    "type": 1,
+                    "string": "execute"
+                  }
+                ],
+                "mapValue": [
+                  {
+                    "type": 1,
+                    "string": "tCPrivacyTagManager"
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": false
                   }
                 ]
               }
