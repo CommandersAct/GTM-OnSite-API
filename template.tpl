@@ -896,50 +896,75 @@ function setConsentUpdateCommand (result) {
     });
 }
 
-function reactiveEventPush() {
-    if (data.advancedFeatures && data.activateReactiveEvents) {
-        const dataLayerPush = createQueue('dataLayer');
-        if (data.activateAdEvent) {
-            dataLayerPush({
-                'event': data.adEventName
-            });
-        }
-        if (data.analyticsEventName) {
-            dataLayerPush({
-                'event': data.analyticsEventName
-            });
-        }
-        if (data.functionalityEventName) {
-            dataLayerPush({
-                'event': data.functionalityEventName
-            });
-        }
-        if (data.personalizationEventName) {
-            dataLayerPush({
-                'event': data.personalizationEventName
-            });
-        }
-        if (data.securityEventName) {
-            dataLayerPush({
-                'event': data.securityEventName
-            });
-        }
-        if (data.adUserDataEventName) {
-            dataLayerPush({
-                'event': data.adUserDataEventName
-            });
-        }
-        if (data.adPersonalizationEventName) {
-            dataLayerPush({
-                'event': data.adPersonalizationEventName
-            });
-        }
-        if (data.globalConsentEventName) {
-            dataLayerPush({
-                'event': data.globalConsentEventName
-            });
-        }
-    }
+function reactiveEventPush(result) {
+	logToConsole("caPrevConsent: ", caPrevConsent);
+	if (data.advancedFeatures && data.activateReactiveEvents) {
+	    const dataLayerPush = createQueue('dataLayer');
+	    if ((caPrevConsent === '' || caPrevConsent.consent.categories[data.caTrustAdStorageCatId].status !== "on") &&
+	        (result.consent.categories[data.caTrustAdStorageCatId].status === "on")) {
+	        if (data.activateAdEvent) {
+	            dataLayerPush({
+	                'event': data.adEventName
+	            });
+	        }
+	    }
+	    if ((caPrevConsent === '' || caPrevConsent.consent.categories[data.caTrustAnalyticsStorageCatId].status !== "on") &&
+	        (result.consent.categories[data.caTrustAnalyticsStorageCatId].status === "on")) {
+	        if (data.analyticsEventName) {
+	            dataLayerPush({
+	                'event': data.analyticsEventName
+	            });
+	        }
+	    }
+	    if ((caPrevConsent === '' || caPrevConsent.consent.categories[data.caTrustFunctionalityStorageCatId].status !== "on") &&
+	        (result.consent.categories[data.caTrustFunctionalityStorageCatId].status === "on")) {
+	        if (data.functionalityEventName) {
+	            dataLayerPush({
+	                'event': data.functionalityEventName
+	            });
+	        }
+	    }
+	    if ((caPrevConsent === '' || caPrevConsent.consent.categories[data.caTrustPersonalizationStorageCatId].status !== "on") &&
+	        (result.consent.categories[data.caTrustPersonalizationStorageCatId].status === "on")) {
+	        if (data.personalizationEventName) {
+	            dataLayerPush({
+	                'event': data.personalizationEventName
+	            });
+	        }
+	    }
+	    if ((caPrevConsent === '' || caPrevConsent.consent.categories[data.caTrustSecurityStorageCatId].status !== "on") &&
+	        (result.consent.categories[data.caTrustSecurityStorageCatId].status === "on")) {
+	        if (data.securityEventName) {
+	            dataLayerPush({
+	                'event': data.securityEventName
+	            });
+	        }
+	    }
+	    if ((caPrevConsent === '' || caPrevConsent.consent.categories[data.caTrustAdUserDataCatId].status !== "on") &&
+	        (result.consent.categories[data.caTrustAdUserDataCatId].status === "on")) {
+	        if (data.adUserDataEventName) {
+	            dataLayerPush({
+	                'event': data.adUserDataEventName
+	            });
+	        }
+	    }
+	    if ((caPrevConsent === '' || caPrevConsent.consent.categories[data.caTrustAdPersonalizationCatId].status !== "on") &&
+	        (result.consent.categories[data.caTrustAdPersonalizationCatId].status === "on")) {
+	        if (data.adPersonalizationEventName) {
+	            dataLayerPush({
+	                'event': data.adPersonalizationEventName
+	            });
+	        }
+	    }
+	    if ((caPrevConsent === '' || caPrevConsent.consent.status !== "all-on") &&
+	        (result.consent.status === "all-on")) {
+	        if (data.globalConsentEventName) {
+	            dataLayerPush({
+	                'event': data.globalConsentEventName
+	            });
+	        }
+	    }
+	}
 }
 
 cact('consent.get', function (result) {
@@ -948,7 +973,7 @@ cact('consent.get', function (result) {
     if (result.consent.status !== "unset") {
         setConsentUpdateCommand(result);
         if (typeof data.onlyOnConsentUpdate === 'undefined' || (typeof data.onlyOnConsentUpdate !== 'undefined' && data.onlyOnConsentUpdate === false)) {
-            reactiveEventPush();
+            reactiveEventPush(result);
         }
     }
     caPrevConsent = result;
@@ -958,7 +983,7 @@ cact('consent.onUpdate', function (result) {
   logToConsole("Commanders Act | OnSite API: consent.onUpdate");
   logToConsole("result: ", result);
   setConsentUpdateCommand(result);
-  reactiveEventPush();
+  reactiveEventPush(result);
 });
 
 data.gtmOnSuccess();
