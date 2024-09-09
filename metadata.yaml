@@ -15,10 +15,12 @@
 homepage: "https://www.commandersact.com"
 documentation: "https://doc.commandersact.com/features/consent-management/setup-guides/tag-manager/google-tag-manager-gtm-consent-mode"
 versions:
+  - sha: 142b9e84a0deaa3bebb069a8a6c974b7d0421aa3
+    changeNotes: Updated logic for reactive events.
   - sha: d44b284beab6f017ff7da94bd8a584a61dc20558
-    changeNotes: added legacy variable "tCPrivacyTagManager".
+    changeNotes: Added legacy variable "tCPrivacyTagManager".
   - sha: 34fffb758d8e1d5ca72be698a1d78a4542d477d6
-    changeNotes: added "On Consent Update Only" advanced feature.
+    changeNotes: Added "On Consent Update Only" advanced feature.
   - sha: 6ff13c4a8ff8edada210637d36d08114a5a7b790
     changeNotes: Updated consent.onUpdate callback.
   - sha: ed3419510c99cd2b9246cf21a01b2d7438dd1478
