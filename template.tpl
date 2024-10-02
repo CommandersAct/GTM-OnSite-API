@@ -1,4 +1,4 @@
-﻿___TERMS_OF_SERVICE___
+___TERMS_OF_SERVICE___
 
 By creating or modifying this file you agree to Google Tag Manager's Community
 Template Gallery Developer Terms of Service available at
@@ -900,64 +900,64 @@ function reactiveEventPush(result) {
 	logToConsole("caPrevConsent: ", caPrevConsent);
 	if (data.advancedFeatures && data.activateReactiveEvents) {
 	    const dataLayerPush = createQueue('dataLayer');
-	    if ((caPrevConsent === '' || caPrevConsent.consent.categories[data.caTrustAdStorageCatId].status !== "on") &&
-	        (result.consent.categories[data.caTrustAdStorageCatId].status === "on")) {
+	    if ((caPrevConsent === '' || (caPrevConsent.consent.categories[data.caTrustAdStorageCatId]!== undefined && caPrevConsent.consent.categories[data.caTrustAdStorageCatId].status !== "on")) &&
+	        (result.consent.categories[data.caTrustAdStorageCatId]!== undefined && result.consent.categories[data.caTrustAdStorageCatId].status === "on")) {
 	        if (data.activateAdEvent) {
 	            dataLayerPush({
 	                'event': data.adEventName
 	            });
 	        }
 	    }
-	    if ((caPrevConsent === '' || caPrevConsent.consent.categories[data.caTrustAnalyticsStorageCatId].status !== "on") &&
-	        (result.consent.categories[data.caTrustAnalyticsStorageCatId].status === "on")) {
+	    if ((caPrevConsent === '' || (caPrevConsent.consent.categories[data.caTrustAnalyticsStorageCatId]!==undefined && caPrevConsent.consent.categories[data.caTrustAnalyticsStorageCatId].status !== "on")) &&
+	        (result.consent.categories[data.caTrustAnalyticsStorageCatId]!==undefined && result.consent.categories[data.caTrustAnalyticsStorageCatId].status === "on")) {
 	        if (data.analyticsEventName) {
 	            dataLayerPush({
 	                'event': data.analyticsEventName
 	            });
 	        }
 	    }
-	    if ((caPrevConsent === '' || caPrevConsent.consent.categories[data.caTrustFunctionalityStorageCatId].status !== "on") &&
-	        (result.consent.categories[data.caTrustFunctionalityStorageCatId].status === "on")) {
+	    if ((caPrevConsent === '' || (caPrevConsent.consent.categories[data.caTrustFunctionalityStorageCatId]!==undefined && caPrevConsent.consent.categories[data.caTrustFunctionalityStorageCatId].status !== "on")) &&
+	        (result.consent.categories[data.caTrustFunctionalityStorageCatId]!==undefined && result.consent.categories[data.caTrustFunctionalityStorageCatId].status === "on")) {
 	        if (data.functionalityEventName) {
 	            dataLayerPush({
 	                'event': data.functionalityEventName
 	            });
 	        }
 	    }
-	    if ((caPrevConsent === '' || caPrevConsent.consent.categories[data.caTrustPersonalizationStorageCatId].status !== "on") &&
-	        (result.consent.categories[data.caTrustPersonalizationStorageCatId].status === "on")) {
+	    if ((caPrevConsent === '' || (caPrevConsent.consent.categories[data.caTrustPersonalizationStorageCatId]!==undefined && caPrevConsent.consent.categories[data.caTrustPersonalizationStorageCatId].status !== "on")) &&
+	        (result.consent.categories[data.caTrustPersonalizationStorageCatId]!==undefined && result.consent.categories[data.caTrustPersonalizationStorageCatId].status === "on")) {
 	        if (data.personalizationEventName) {
 	            dataLayerPush({
 	                'event': data.personalizationEventName
 	            });
 	        }
 	    }
-	    if ((caPrevConsent === '' || caPrevConsent.consent.categories[data.caTrustSecurityStorageCatId].status !== "on") &&
-	        (result.consent.categories[data.caTrustSecurityStorageCatId].status === "on")) {
+	    if ((caPrevConsent === '' || (caPrevConsent.consent.categories[data.caTrustSecurityStorageCatId]!==undefined && caPrevConsent.consent.categories[data.caTrustSecurityStorageCatId].status !== "on")) &&
+	        (result.consent.categories[data.caTrustSecurityStorageCatId]!==undefined && result.consent.categories[data.caTrustSecurityStorageCatId].status === "on")) {
 	        if (data.securityEventName) {
 	            dataLayerPush({
 	                'event': data.securityEventName
 	            });
 	        }
 	    }
-	    if ((caPrevConsent === '' || caPrevConsent.consent.categories[data.caTrustAdUserDataCatId].status !== "on") &&
-	        (result.consent.categories[data.caTrustAdUserDataCatId].status === "on")) {
+	    if ((caPrevConsent === '' || (caPrevConsent.consent.categories[data.caTrustAdUserDataCatId]!==undefined && caPrevConsent.consent.categories[data.caTrustAdUserDataCatId].status !== "on")) &&
+	        (result.consent.categories[data.caTrustAdUserDataCatId]!==undefined && result.consent.categories[data.caTrustAdUserDataCatId].status === "on")) {
 	        if (data.adUserDataEventName) {
 	            dataLayerPush({
 	                'event': data.adUserDataEventName
 	            });
 	        }
 	    }
-	    if ((caPrevConsent === '' || caPrevConsent.consent.categories[data.caTrustAdPersonalizationCatId].status !== "on") &&
-	        (result.consent.categories[data.caTrustAdPersonalizationCatId].status === "on")) {
+	    if ((caPrevConsent === '' || (caPrevConsent.consent.categories[data.caTrustAdPersonalizationCatId]!==undefined && caPrevConsent.consent.categories[data.caTrustAdPersonalizationCatId].status !== "on")) &&
+	        (result.consent.categories[data.caTrustAdPersonalizationCatId] !==undefined && result.consent.categories[data.caTrustAdPersonalizationCatId].status === "on")) {
 	        if (data.adPersonalizationEventName) {
 	            dataLayerPush({
 	                'event': data.adPersonalizationEventName
 	            });
 	        }
 	    }
-	    if ((caPrevConsent === '' || caPrevConsent.consent.status !== "all-on") &&
-	        (result.consent.status === "all-on")) {
+	    if ((caPrevConsent === '' || (caPrevConsent.consent!==undefined && caPrevConsent.consent.status !== "all-on")) &&
+	        (result.consent!==undefined && result.consent.status === "all-on")) {
 	        if (data.globalConsentEventName) {
 	            dataLayerPush({
 	                'event': data.globalConsentEventName
