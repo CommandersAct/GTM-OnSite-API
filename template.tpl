@@ -964,11 +964,11 @@ function reactiveEventPush(result) {
 	            });
 	        }
 	    }
-		if (data.globalConsentEventName && triggerGlobalEvent === true) {
-		    dataLayerPush({
-		        'event': data.globalConsentEventName
-		    });
-		}
+	    if (data.globalConsentEventName && triggerGlobalEvent === true) {
+	        dataLayerPush({
+	            'event': data.globalConsentEventName
+	        });
+	    }
 	}
 }
 
