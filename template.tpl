@@ -34,49 +34,49 @@ ___TEMPLATE_PARAMETERS___
     "name": "caTrustAdStorageCatId",
     "displayName": "Consent category Id for \"Ad Storage\"",
     "simpleValueType": true,
-    "help": "Log in into \"Commanders Act\" interface and locate the area \"Data Governance\" → \"Consent Management\" → \"Categories\". Input the category Id (E.g. 1) associated to \"Ad Storage\". More details are available by following this \u003ca href\u003d\"https://doc.commandersact.com/features/consent-management/user-guides/categories-and-tags/manage-categories\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
+    "help": "Log in into \"Commanders Act\" interface and locate the area \"Data Governance\" → \"Consent Management\" → \"Categories\". Input the category Id (E.g. 1) associated to \"Ad Storage\". More details are available following this \u003ca href\u003d\"https://doc.commandersact.com/features/consent-management/user-guides/categories-and-tags/manage-categories\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
   },
   {
     "type": "TEXT",
     "name": "caTrustAnalyticsStorageCatId",
     "displayName": "Consent category Id for \"Analytics Storage\"",
     "simpleValueType": true,
-    "help": "Log in into \"Commanders Act\" interface and locate the area \"Data Governance\" → \"Consent Management\" → \"Categories\". Input the category Id (E.g. 1) associated to \"Analytics Storage\". More details are available by following this \u003ca href\u003d\"https://doc.commandersact.com/features/consent-management/user-guides/categories-and-tags/manage-categories\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
+    "help": "Log in into \"Commanders Act\" interface and locate the area \"Data Governance\" → \"Consent Management\" → \"Categories\". Input the category Id (E.g. 2) associated to \"Analytics Storage\". More details are available following this \u003ca href\u003d\"https://doc.commandersact.com/features/consent-management/user-guides/categories-and-tags/manage-categories\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
   },
   {
     "type": "TEXT",
     "name": "caTrustFunctionalityStorageCatId",
     "displayName": "Consent category Id for \"Functionality Storage\"",
     "simpleValueType": true,
-    "help": "Log in into \"Commanders Act\" interface and locate the area \"Data Governance\" → \"Consent Management\" → \"Categories\". Input the category Id (E.g. 1) associated to \"Functionality Storage\". More details are available by following this \u003ca href\u003d\"https://doc.commandersact.com/features/consent-management/user-guides/categories-and-tags/manage-categories\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
+    "help": "Log in into \"Commanders Act\" interface and locate the area \"Data Governance\" → \"Consent Management\" → \"Categories\". Input the category Id (E.g. 3) associated to \"Functionality Storage\". More details are available following this \u003ca href\u003d\"https://doc.commandersact.com/features/consent-management/user-guides/categories-and-tags/manage-categories\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
   },
   {
     "type": "TEXT",
     "name": "caTrustPersonalizationStorageCatId",
     "displayName": "Consent category Id for \"Personalization Storage\"",
     "simpleValueType": true,
-    "help": "Log in into \"Commanders Act\" interface and locate the area \"Data Governance\" → \"Consent Management\" → \"Categories\". Input the category Id (E.g. 1) associated to \"Personalization Storage\". More details are available by following this \u003ca href\u003d\"https://doc.commandersact.com/features/consent-management/user-guides/categories-and-tags/manage-categories\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
+    "help": "Log in into \"Commanders Act\" interface and locate the area \"Data Governance\" → \"Consent Management\" → \"Categories\". Input the category Id (E.g. 4) associated to \"Personalization Storage\". More details are available following this \u003ca href\u003d\"https://doc.commandersact.com/features/consent-management/user-guides/categories-and-tags/manage-categories\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
   },
   {
     "type": "TEXT",
     "name": "caTrustSecurityStorageCatId",
     "displayName": "Consent category Id for \"Security Storage\"",
     "simpleValueType": true,
-    "help": "Log in into \"Commanders Act\" interface and locate the area \"Data Governance\" → \"Consent Management\" → \"Categories\". Input the category Id (E.g. 1) associated to \"Security Storage\". More details are available by following this \u003ca href\u003d\"https://doc.commandersact.com/features/consent-management/user-guides/categories-and-tags/manage-categories\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
+    "help": "Log in into \"Commanders Act\" interface and locate the area \"Data Governance\" → \"Consent Management\" → \"Categories\". Input the category Id (E.g. 5) associated to \"Security Storage\". More details are available following this \u003ca href\u003d\"https://doc.commandersact.com/features/consent-management/user-guides/categories-and-tags/manage-categories\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
   },
   {
     "type": "TEXT",
     "name": "caTrustAdUserDataCatId",
     "displayName": "Consent category Id for \"Ad User Data\"",
     "simpleValueType": true,
-    "help": "Log in into \"Commanders Act\" interface and locate the area \"Data Governance\" → \"Consent Management\" → \"Categories\". Input the category Id (E.g. 1) associated to \"Ad User Data\". More details are available by following this \u003ca href\u003d\"https://doc.commandersact.com/features/consent-management/user-guides/categories-and-tags/manage-categories\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
+    "help": "Log in into \"Commanders Act\" interface and locate the area \"Data Governance\" → \"Consent Management\" → \"Categories\". Input the category Id (E.g. 6) associated to \"Ad User Data\". More details are available following this \u003ca href\u003d\"https://doc.commandersact.com/features/consent-management/user-guides/categories-and-tags/manage-categories\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
   },
   {
     "type": "TEXT",
     "name": "caTrustAdPersonalizationCatId",
     "displayName": "Consent category Id for \"Ad Personalization\"",
     "simpleValueType": true,
-    "help": "Log in into \"Commanders Act\" interface and locate the area \"Data Governance\" → \"Consent Management\" → \"Categories\". Input the category Id (E.g. 1) associated to \"Ad Personalization\". More details are available by following this \u003ca href\u003d\"https://doc.commandersact.com/features/consent-management/user-guides/categories-and-tags/manage-categories\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
+    "help": "Log in into \"Commanders Act\" interface and locate the area \"Data Governance\" → \"Consent Management\" → \"Categories\". Input the category Id (E.g. 7) associated to \"Ad Personalization\". More details are available following this \u003ca href\u003d\"https://doc.commandersact.com/features/consent-management/user-guides/categories-and-tags/manage-categories\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
   },
   {
     "type": "TEXT",
@@ -455,14 +455,14 @@ ___TEMPLATE_PARAMETERS___
     "name": "enableUrlPassthrough",
     "checkboxText": "Enable \"URL Passthrough\"",
     "simpleValueType": true,
-    "help": "Activate \"URL Passthrough\". For more information, you can check this \u003ca href\u003d\"https://developers.google.com/tag-platform/devguides/consent#passing_ad_click_client_id_and_session_id_information_in_urls\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
+    "help": "Activate \"URL Passthrough\". More details are available following this \u003ca href\u003d\"https://developers.google.com/tag-platform/devguides/consent#passing_ad_click_client_id_and_session_id_information_in_urls\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
   },
   {
     "type": "CHECKBOX",
     "name": "enableAdsDataRedaction",
     "checkboxText": "Enable \"Ads Data Redaction\"",
     "simpleValueType": true,
-    "help": "Activate \"Ads Data Redaction\". For more information, you can check this \u003ca href\u003d\"https://developers.google.com/tag-platform/devguides/consent#redact_ads_data\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
+    "help": "Activate \"Ads Data Redaction\". More details are available following this \u003ca href\u003d\"https://developers.google.com/tag-platform/devguides/consent#redact_ads_data\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
   },
   {
     "type": "CHECKBOX",
@@ -496,6 +496,20 @@ ___TEMPLATE_PARAMETERS___
           }
         ],
         "help": "Enter your Commanders Act CMP Script full URL."
+      },
+      {
+        "type": "CHECKBOX",
+        "name": "gtagEnableTcfSupport",
+        "checkboxText": "Enable TCF Support for gtag",
+        "simpleValueType": true,
+        "help": "Enable TCF support for gtag by setting the property \u003ccode\u003e\u003cb\u003egtag_enable_tcf_support\u003c/b\u003e\u003c/code\u003e to \u003ccode\u003e\u003cb\u003etrue\u003c/b\u003e\u003c/code\u003e. More details are available following this \u003ca href\u003d\"https://support.google.com/google-ads/answer/10021549?hl\u003den#\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e.",
+        "enablingConditions": [
+          {
+            "paramName": "advancedFeatures",
+            "paramValue": true,
+            "type": "EQUALS"
+          }
+        ]
       },
       {
         "type": "CHECKBOX",
@@ -734,13 +748,19 @@ const createQueue = require('createQueue');
 const gtagSet = require('gtagSet');
 const JSON = require('JSON');
 
-if (data.advancedFeatures && data.injectCmpJsFlag && data.injectCmpJsFullUrl) {
-  setInWindow('tCPrivacyTagManager', 'gtm', true);
-  if (queryPermission('inject_script', data.injectCmpJsFullUrl)) {
-    logToConsole('Injecting CMP Script...');
-    injectScript(data.injectCmpJsFullUrl, onSuccess, data.gtmOnFailure, data.injectCmpJsFullUrl);
-  } else {
-    logToConsole('ERROR | Script load failed due to permissions mismatch.');
+if (data.advancedFeatures) {
+  if (data.injectCmpJsFlag && data.injectCmpJsFullUrl) {	
+    setInWindow('tCPrivacyTagManager', 'gtm', true);
+    if (queryPermission('inject_script', data.injectCmpJsFullUrl)) {
+      logToConsole('Injecting CMP Script...');
+      injectScript(data.injectCmpJsFullUrl, onSuccess, data.gtmOnFailure, data.injectCmpJsFullUrl);
+    } else {
+      logToConsole('ERROR | Script load failed due to permissions mismatch.');
+    }
+  }
+  if (data.gtagEnableTcfSupport) {
+    logToConsole('Enabling TCF support for gtag...');
+    setInWindow('gtag_enable_tcf_support', true, true);
   }
 }
 function onSuccess() {
@@ -1441,6 +1461,45 @@ ___WEB_PERMISSIONS___
                   {
                     "type": 1,
                     "string": "tCPrivacyTagManager"
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": false
+                  }
+                ]
+              },
+              {
+                "type": 3,
+                "mapKey": [
+                  {
+                    "type": 1,
+                    "string": "key"
+                  },
+                  {
+                    "type": 1,
+                    "string": "read"
+                  },
+                  {
+                    "type": 1,
+                    "string": "write"
+                  },
+                  {
+                    "type": 1,
+                    "string": "execute"
+                  }
+                ],
+                "mapValue": [
+                  {
+                    "type": 1,
+                    "string": "gtag_enable_tcf_support"
                   },
                   {
                     "type": 8,
