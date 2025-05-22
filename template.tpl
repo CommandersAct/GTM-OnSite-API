@@ -721,6 +721,20 @@ ___TEMPLATE_PARAMETERS___
             "type": "EQUALS"
           }
         ]
+      },
+      {
+        "type": "CHECKBOX",
+        "name": "uetqConsentMode",
+        "checkboxText": "Enable Microsoft Ads Consent Mode",
+        "simpleValueType": true,
+        "defaultValue": false
+      },
+      {
+        "type": "CHECKBOX",
+        "name": "pixieConsentMode",
+        "checkboxText": "Enable Microsoft Xandr Consent Mode",
+        "simpleValueType": true,
+        "defaultValue": false
       }
     ],
     "enablingConditions": [
@@ -745,6 +759,7 @@ const logToConsole = require('logToConsole');
 const setInWindow = require('setInWindow');
 const makeInteger = require('makeInteger');
 const createQueue = require('createQueue');
+const copyFromWindow = require('copyFromWindow');
 const gtagSet = require('gtagSet');
 const JSON = require('JSON');
 
@@ -777,6 +792,7 @@ if (data.enableAdsDataRedaction) {
   logToConsole("Commanders Act | OnSite API: Ads Data Redaction set to TRUE");
 }
 
+
 function setDefaultConsentByRegion(defaultTable, storageType) {
   let regionDenied = [], regionGranted = [];
   if (defaultTable) {
@@ -806,6 +822,28 @@ function setDefaultConsentByRegion(defaultTable, storageType) {
           setDefaultConsentState(consentSettings);
         }
       }
+		// Set default Microsoft consent state
+		if (data.uetqConsentMode===true && storageType === "ad_storage" && defaultTable[i].region === "") {
+			require('createQueue')('uetq')('consent', 'default', {    
+				'ad_storage': defaultTable[i].default_consent
+			});
+		}
+		// Set default Xandr consent state
+		if (data.pixieConsentMode===true && storageType === "ad_storage" && defaultTable[i].region === "") {
+			let pixie = copyFromWindow('pixie');
+			if(!pixie){
+			   let pQ;
+			   setInWindow('pixie', (e, i, a) => {
+				 pQ({ action: e, actionValue: i, params: a });
+			   });
+			   pQ = createQueue('pixie.actionQueue'); 
+			}
+			pixie = copyFromWindow('pixie');
+			logToConsole("Xandr pixie ", pixie);
+			pixie('consent', 'default', {    
+				'ad_storage': defaultTable[i].default_consent
+			});
+		}
     }
     if (regionDenied.length > 0) {
       let consentSettings = {};
@@ -914,6 +952,27 @@ function setConsentUpdateCommand (result) {
         'ad_personalization': adPersonalizationStatus,
         'wait_for_update': (typeof data.waitforUpdate !== "undefined") ? makeInteger(data.waitforUpdate) : 0
     });
+     // Set update of consent for Microsoft       
+    if (data.uetqConsentMode===true) {
+      require('createQueue')('uetq')('consent', 'update', {    
+        'ad_storage':adStatus
+      });
+	}
+    // Set update of consent for Xandr       
+    if (data.pixieConsentMode===true) {
+      let pixie = copyFromWindow('pixie');
+	  if(!pixie){
+		let pQ;
+		setInWindow('pixie', (e, i, a) => {
+		  pQ({ action: e, actionValue: i, params: a });
+		});
+		pQ = createQueue('pixie.actionQueue'); 
+      }
+      pixie = copyFromWindow('pixie');
+      pixie('consent', 'update', {    
+        'ad_storage':adStatus
+      });
+   }
 }
 
 function reactiveEventPush(result) {
@@ -1500,6 +1559,123 @@ ___WEB_PERMISSIONS___
                   {
                     "type": 1,
                     "string": "gtag_enable_tcf_support"
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": false
+                  }
+                ]
+              },
+              {
+                "type": 3,
+                "mapKey": [
+                  {
+                    "type": 1,
+                    "string": "key"
+                  },
+                  {
+                    "type": 1,
+                    "string": "read"
+                  },
+                  {
+                    "type": 1,
+                    "string": "write"
+                  },
+                  {
+                    "type": 1,
+                    "string": "execute"
+                  }
+                ],
+                "mapValue": [
+                  {
+                    "type": 1,
+                    "string": "uetq"
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": false
+                  }
+                ]
+              },
+              {
+                "type": 3,
+                "mapKey": [
+                  {
+                    "type": 1,
+                    "string": "key"
+                  },
+                  {
+                    "type": 1,
+                    "string": "read"
+                  },
+                  {
+                    "type": 1,
+                    "string": "write"
+                  },
+                  {
+                    "type": 1,
+                    "string": "execute"
+                  }
+                ],
+                "mapValue": [
+                  {
+                    "type": 1,
+                    "string": "pixie.actionQueue"
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": false
+                  }
+                ]
+              },
+              {
+                "type": 3,
+                "mapKey": [
+                  {
+                    "type": 1,
+                    "string": "key"
+                  },
+                  {
+                    "type": 1,
+                    "string": "read"
+                  },
+                  {
+                    "type": 1,
+                    "string": "write"
+                  },
+                  {
+                    "type": 1,
+                    "string": "execute"
+                  }
+                ],
+                "mapValue": [
+                  {
+                    "type": 1,
+                    "string": "pixie"
                   },
                   {
                     "type": 8,
