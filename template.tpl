@@ -34,56 +34,56 @@ ___TEMPLATE_PARAMETERS___
     "name": "caTrustAdStorageCatId",
     "displayName": "Consent category Id for \"Ad Storage\"",
     "simpleValueType": true,
-    "help": "Log in into \"Commanders Act\" interface and locate the area \"Data Governance\" → \"Consent Management\" → \"Categories\". Input the category Id (E.g. 1) associated to \"Ad Storage\". More details are available following this \u003ca href\u003d\"https://doc.commandersact.com/features/consent-management/user-guides/categories-and-tags/manage-categories\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
+    "help": "Log in into \u003ccode\u003e\u003cb\u003eCommanders Act\u003c/code\u003e\u003c/b\u003e interface and locate the area \u003ccode\u003e\u003cb\u003eData Governance\u003c/code\u003e\u003c/b\u003e → \u003ccode\u003e\u003cb\u003eConsent Management\u003c/code\u003e\u003c/b\u003e → \u003ccode\u003e\u003cb\u003eCategories\u003c/code\u003e\u003c/b\u003e. Input the category Id (E.g. 1) associated to \u003ccode\u003e\u003cb\u003eAd Storage\u003c/code\u003e\u003c/b\u003e. More details are available following this \u003ca href\u003d\"https://doc.commandersact.com/features/consent-management/user-guides/categories-and-tags/manage-categories\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
   },
   {
     "type": "TEXT",
     "name": "caTrustAnalyticsStorageCatId",
     "displayName": "Consent category Id for \"Analytics Storage\"",
     "simpleValueType": true,
-    "help": "Log in into \"Commanders Act\" interface and locate the area \"Data Governance\" → \"Consent Management\" → \"Categories\". Input the category Id (E.g. 2) associated to \"Analytics Storage\". More details are available following this \u003ca href\u003d\"https://doc.commandersact.com/features/consent-management/user-guides/categories-and-tags/manage-categories\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
+    "help": "Log in into \u003ccode\u003e\u003cb\u003eCommanders Act\u003c/code\u003e\u003c/b\u003e interface and locate the area \u003ccode\u003e\u003cb\u003eData Governance\u003c/code\u003e\u003c/b\u003e → \u003ccode\u003e\u003cb\u003eConsent Management\u003c/code\u003e\u003c/b\u003e → \u003ccode\u003e\u003cb\u003eCategories\u003c/code\u003e\u003c/b\u003e. Input the category Id (E.g. 2) associated to \u003ccode\u003e\u003cb\u003eAnalytics Storage\u003c/code\u003e\u003c/b\u003e. More details are available following this \u003ca href\u003d\"https://doc.commandersact.com/features/consent-management/user-guides/categories-and-tags/manage-categories\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
   },
   {
     "type": "TEXT",
     "name": "caTrustFunctionalityStorageCatId",
     "displayName": "Consent category Id for \"Functionality Storage\"",
     "simpleValueType": true,
-    "help": "Log in into \"Commanders Act\" interface and locate the area \"Data Governance\" → \"Consent Management\" → \"Categories\". Input the category Id (E.g. 3) associated to \"Functionality Storage\". More details are available following this \u003ca href\u003d\"https://doc.commandersact.com/features/consent-management/user-guides/categories-and-tags/manage-categories\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
+    "help": "Log in into \u003ccode\u003e\u003cb\u003eCommanders Act\u003c/code\u003e\u003c/b\u003e interface and locate the area \u003ccode\u003e\u003cb\u003eData Governance\u003c/code\u003e\u003c/b\u003e → \u003ccode\u003e\u003cb\u003eConsent Management\u003c/code\u003e\u003c/b\u003e → \u003ccode\u003e\u003cb\u003eCategories\u003c/code\u003e\u003c/b\u003e. Input the category Id (E.g. 3) associated to \u003ccode\u003e\u003cb\u003eFunctionality Storage\u003c/code\u003e\u003c/b\u003e. More details are available following this \u003ca href\u003d\"https://doc.commandersact.com/features/consent-management/user-guides/categories-and-tags/manage-categories\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
   },
   {
     "type": "TEXT",
     "name": "caTrustPersonalizationStorageCatId",
     "displayName": "Consent category Id for \"Personalization Storage\"",
     "simpleValueType": true,
-    "help": "Log in into \"Commanders Act\" interface and locate the area \"Data Governance\" → \"Consent Management\" → \"Categories\". Input the category Id (E.g. 4) associated to \"Personalization Storage\". More details are available following this \u003ca href\u003d\"https://doc.commandersact.com/features/consent-management/user-guides/categories-and-tags/manage-categories\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
+    "help": "Log in into \u003ccode\u003e\u003cb\u003eCommanders Act\u003c/code\u003e\u003c/b\u003e interface and locate the area \u003ccode\u003e\u003cb\u003eData Governance\u003c/code\u003e\u003c/b\u003e → \u003ccode\u003e\u003cb\u003eConsent Management\u003c/code\u003e\u003c/b\u003e → \u003ccode\u003e\u003cb\u003eCategories\u003c/code\u003e\u003c/b\u003e. Input the category Id (E.g. 4) associated to \u003ccode\u003e\u003cb\u003ePersonalization Storage\u003c/code\u003e\u003c/b\u003e. More details are available following this \u003ca href\u003d\"https://doc.commandersact.com/features/consent-management/user-guides/categories-and-tags/manage-categories\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
   },
   {
     "type": "TEXT",
     "name": "caTrustSecurityStorageCatId",
     "displayName": "Consent category Id for \"Security Storage\"",
     "simpleValueType": true,
-    "help": "Log in into \"Commanders Act\" interface and locate the area \"Data Governance\" → \"Consent Management\" → \"Categories\". Input the category Id (E.g. 5) associated to \"Security Storage\". More details are available following this \u003ca href\u003d\"https://doc.commandersact.com/features/consent-management/user-guides/categories-and-tags/manage-categories\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
+    "help": "Log in into \u003ccode\u003e\u003cb\u003eCommanders Act\u003c/code\u003e\u003c/b\u003e interface and locate the area \u003ccode\u003e\u003cb\u003eData Governance\u003c/code\u003e\u003c/b\u003e → \u003ccode\u003e\u003cb\u003eConsent Management\u003c/code\u003e\u003c/b\u003e → \u003ccode\u003e\u003cb\u003eCategories\u003c/code\u003e\u003c/b\u003e. Input the category Id (E.g. 5) associated to \u003ccode\u003e\u003cb\u003eSecurity Storage\u003c/code\u003e\u003c/b\u003e. More details are available following this \u003ca href\u003d\"https://doc.commandersact.com/features/consent-management/user-guides/categories-and-tags/manage-categories\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
   },
   {
     "type": "TEXT",
     "name": "caTrustAdUserDataCatId",
     "displayName": "Consent category Id for \"Ad User Data\"",
     "simpleValueType": true,
-    "help": "Log in into \"Commanders Act\" interface and locate the area \"Data Governance\" → \"Consent Management\" → \"Categories\". Input the category Id (E.g. 6) associated to \"Ad User Data\". More details are available following this \u003ca href\u003d\"https://doc.commandersact.com/features/consent-management/user-guides/categories-and-tags/manage-categories\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
+    "help": "Log in into \u003ccode\u003e\u003cb\u003eCommanders Act\u003c/code\u003e\u003c/b\u003e interface and locate the area \u003ccode\u003e\u003cb\u003eData Governance\u003c/code\u003e\u003c/b\u003e → \u003ccode\u003e\u003cb\u003eConsent Management\u003c/code\u003e\u003c/b\u003e → \u003ccode\u003e\u003cb\u003eCategories\u003c/code\u003e\u003c/b\u003e. Input the category Id (E.g. 6) associated to \u003ccode\u003e\u003cb\u003eAd User Data\u003c/code\u003e\u003c/b\u003e. More details are available following this \u003ca href\u003d\"https://doc.commandersact.com/features/consent-management/user-guides/categories-and-tags/manage-categories\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
   },
   {
     "type": "TEXT",
     "name": "caTrustAdPersonalizationCatId",
     "displayName": "Consent category Id for \"Ad Personalization\"",
     "simpleValueType": true,
-    "help": "Log in into \"Commanders Act\" interface and locate the area \"Data Governance\" → \"Consent Management\" → \"Categories\". Input the category Id (E.g. 7) associated to \"Ad Personalization\". More details are available following this \u003ca href\u003d\"https://doc.commandersact.com/features/consent-management/user-guides/categories-and-tags/manage-categories\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
+    "help": "Log in into \u003ccode\u003e\u003cb\u003eCommanders Act\u003c/code\u003e\u003c/b\u003e interface and locate the area \u003ccode\u003e\u003cb\u003eData Governance\u003c/code\u003e\u003c/b\u003e → \u003ccode\u003e\u003cb\u003eConsent Management\u003c/code\u003e\u003c/b\u003e → \u003ccode\u003e\u003cb\u003eCategories\u003c/code\u003e\u003c/b\u003e. Input the category Id (E.g. 7) associated to \u003ccode\u003e\u003cb\u003eAd Personalization\u003c/code\u003e\u003c/b\u003e. More details are available following this \u003ca href\u003d\"https://doc.commandersact.com/features/consent-management/user-guides/categories-and-tags/manage-categories\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
   },
   {
     "type": "TEXT",
     "name": "waitforUpdate",
     "displayName": "Wait for update",
     "simpleValueType": true,
-    "help": "Set how long to wait, in miliseconds, before sending data (Default 0).",
+    "help": "Set how long to wait, in miliseconds, before sending data (Default \u003ccode\u003e\u003cb\u003e0\u003c/b\u003e\u003c/code\u003e).",
     "valueUnit": "Milliseconds",
     "valueValidators": [
       {
@@ -140,7 +140,7 @@ ___TEMPLATE_PARAMETERS___
             "errorMessage": ""
           }
         ],
-        "help": "Default status for \"Ad Storage\" before interacting with the privacy banner and by region.\nLeave the \"Region\" field empty to apply your selection to all regions."
+        "help": "Default status for \u003ccode\u003e\u003cb\u003eAd Storage\u003c/code\u003e\u003c/b\u003e before interacting with the privacy banner and by region. Leave the \u003ccode\u003e\u003cb\u003eRegion\u003c/code\u003e\u003c/b\u003e field empty to apply your selection to all regions."
       }
     ]
   },
@@ -191,7 +191,7 @@ ___TEMPLATE_PARAMETERS___
             ]
           }
         ],
-        "help": "Default status for \"Analytics Storage\" before interacting with the privacy banner and by region. Leave the \"Region\" field empty to apply your selection to all regions."
+        "help": "Default status for \u003ccode\u003e\u003cb\u003eAnalytics Storage\u003c/code\u003e\u003c/b\u003e before interacting with the privacy banner and by region. Leave the \u003ccode\u003e\u003cb\u003eRegion\u003c/code\u003e\u003c/b\u003e field empty to apply your selection to all regions."
       }
     ]
   },
@@ -242,7 +242,7 @@ ___TEMPLATE_PARAMETERS___
             ]
           }
         ],
-        "help": "Default status for \"Functionality Storage\" before interacting with the privacy banner and by region. Leave the \"Region\" field empty to apply your selection to all regions."
+        "help": "Default status for \u003ccode\u003e\u003cb\u003eFunctionality Storage\u003c/code\u003e\u003c/b\u003e before interacting with the privacy banner and by region. Leave the \u003ccode\u003e\u003cb\u003eRegion\u003c/code\u003e\u003c/b\u003e field empty to apply your selection to all regions."
       }
     ]
   },
@@ -293,7 +293,7 @@ ___TEMPLATE_PARAMETERS___
             ]
           }
         ],
-        "help": "Default status for \"Personalization Storage\" before interacting with the privacy banner and by region. Leave the \"Region\" field empty to apply your selection to all regions."
+        "help": "Default status for \u003ccode\u003e\u003cb\u003ePersonalization Storage\u003c/code\u003e\u003c/b\u003e before interacting with the privacy banner and by region. Leave the \u003ccode\u003e\u003cb\u003eRegion\u003c/code\u003e\u003c/b\u003e field empty to apply your selection to all regions."
       }
     ]
   },
@@ -344,7 +344,7 @@ ___TEMPLATE_PARAMETERS___
             ]
           }
         ],
-        "help": "Default status for \"Security Storage\" before interacting with the privacy banner and by region. Leave the \"Region\" field empty to apply your selection to all regions."
+        "help": "Default status for \u003ccode\u003e\u003cb\u003eSecurity Storage\u003c/code\u003e\u003c/b\u003e before interacting with the privacy banner and by region. Leave the \u003ccode\u003e\u003cb\u003eRegion\u003c/code\u003e\u003c/b\u003e field empty to apply your selection to all regions."
       }
     ]
   },
@@ -395,7 +395,7 @@ ___TEMPLATE_PARAMETERS___
             ]
           }
         ],
-        "help": "Default status for \"Ad User Data\" before interacting with the privacy banner and by region. Leave the \"Region\" field empty to apply your selection to all regions."
+        "help": "Default status for \u003ccode\u003e\u003cb\u003eAd User Data\u003c/code\u003e\u003c/b\u003e before interacting with the privacy banner and by region. Leave the \u003ccode\u003e\u003cb\u003eRegion\u003c/code\u003e\u003c/b\u003e field empty to apply your selection to all regions."
       }
     ]
   },
@@ -446,7 +446,7 @@ ___TEMPLATE_PARAMETERS___
             ]
           }
         ],
-        "help": "Default status for \"Ad Personalization\" before interacting with the privacy banner and by region. Leave the \"Region\" field empty to apply your selection to all regions."
+        "help": "Default status for \u003ccode\u003e\u003cb\u003eAd Personalization\u003c/code\u003e\u003c/b\u003e before interacting with the privacy banner and by region. Leave the \u003ccode\u003e\u003cb\u003eRegion\u003c/code\u003e\u003c/b\u003e field empty to apply your selection to all regions."
       }
     ]
   },
@@ -455,14 +455,14 @@ ___TEMPLATE_PARAMETERS___
     "name": "enableUrlPassthrough",
     "checkboxText": "Enable \"URL Passthrough\"",
     "simpleValueType": true,
-    "help": "Activate \"URL Passthrough\". More details are available following this \u003ca href\u003d\"https://developers.google.com/tag-platform/devguides/consent#passing_ad_click_client_id_and_session_id_information_in_urls\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
+    "help": "Activate \u003ccode\u003e\u003cb\u003eURL Passthrough\u003c/code\u003e\u003c/b\u003e. More details are available following this \u003ca href\u003d\"https://developers.google.com/tag-platform/devguides/consent#passing_ad_click_client_id_and_session_id_information_in_urls\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
   },
   {
     "type": "CHECKBOX",
     "name": "enableAdsDataRedaction",
     "checkboxText": "Enable \"Ads Data Redaction\"",
     "simpleValueType": true,
-    "help": "Activate \"Ads Data Redaction\". More details are available following this \u003ca href\u003d\"https://developers.google.com/tag-platform/devguides/consent#redact_ads_data\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
+    "help": "Activate \u003ccode\u003e\u003cb\u003eAds Data Redaction\u003c/code\u003e\u003c/b\u003e. More details are available following this \u003ca href\u003d\"https://developers.google.com/tag-platform/devguides/consent#redact_ads_data\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e."
   },
   {
     "type": "CHECKBOX",
@@ -486,7 +486,7 @@ ___TEMPLATE_PARAMETERS___
       {
         "type": "TEXT",
         "name": "injectCmpJsFullUrl",
-        "displayName": "URL:",
+        "displayName": "URL",
         "simpleValueType": true,
         "enablingConditions": [
           {
@@ -530,7 +530,7 @@ ___TEMPLATE_PARAMETERS___
         "name": "activateReactiveEvents",
         "checkboxText": "Activate Reactive Events",
         "simpleValueType": true,
-        "help": "Third-party vendor tags require additional settings to properly operate with the user consent."
+        "help": "Activate reactive events as third-party vendor tags require additional settings to properly operate with the user consent."
       },
       {
         "type": "GROUP",
@@ -543,7 +543,7 @@ ___TEMPLATE_PARAMETERS___
             "name": "onlyOnConsentUpdate",
             "checkboxText": "On Consent Update Only",
             "simpleValueType": true,
-            "help": "When flagged, \"Reactive Events\" will trigger ONLY when user interacts with the banner to confirm consent choices."
+            "help": "When flagged, \u003ccode\u003e\u003cb\u003eReactive Events\u003c/code\u003e\u003c/b\u003e will trigger ONLY when user interacts with the banner to confirm consent choices."
           },
           {
             "type": "CHECKBOX",
@@ -554,9 +554,9 @@ ___TEMPLATE_PARAMETERS___
           {
             "type": "TEXT",
             "name": "adEventName",
-            "displayName": "Ad Storage Event Name:",
+            "displayName": "Ad Storage Event Name",
             "simpleValueType": true,
-            "help": "GTM custom reactive event name for \"Ad Storage\". Default name: \"reactive_ad_on\". You need to configure a \"Custom Event\" trigger using the same event name.",
+            "help": "GTM custom reactive event name for \u003ccode\u003e\u003cb\u003eAd Storage\u003c/code\u003e\u003c/b\u003e. Default name: \u003ccode\u003e\u003cb\u003ereactive_ad_on\u003c/code\u003e\u003c/b\u003e. You need to configure a \u003ccode\u003e\u003cb\u003eCustom Event\u003c/code\u003e\u003c/b\u003e trigger using the same event name.",
             "defaultValue": "reactive_ad_on",
             "enablingConditions": [
               {
@@ -575,9 +575,9 @@ ___TEMPLATE_PARAMETERS___
           {
             "type": "TEXT",
             "name": "analyticsEventName",
-            "displayName": "Analytics Storage Event Name:",
+            "displayName": "Analytics Storage Event Name",
             "simpleValueType": true,
-            "help": "GTM custom reactive event name for \"Analytics Storage\". Default name: \"reactive_analytics_on\". You need to configure a \"Custom Event\" trigger using the same event name.",
+            "help": "GTM custom reactive event name for \u003ccode\u003e\u003cb\u003eAnalytics Storage\u003c/code\u003e\u003c/b\u003e. Default name: \u003ccode\u003e\u003cb\u003ereactive_analytics_on\u003c/code\u003e\u003c/b\u003e. You need to configure a \u003ccode\u003e\u003cb\u003eCustom Event\u003c/code\u003e\u003c/b\u003e trigger using the same event name.",
             "defaultValue": "reactive_analytics_on",
             "enablingConditions": [
               {
@@ -596,9 +596,9 @@ ___TEMPLATE_PARAMETERS___
           {
             "type": "TEXT",
             "name": "functionalityEventName",
-            "displayName": "Functionality Storage Event Name:",
+            "displayName": "Functionality Storage Event Name",
             "simpleValueType": true,
-            "help": "GTM custom reactive event name for \"Functionality Storage\". Default name: \"reactive_functionality_on\". You need to configure a \"Custom Event\" trigger using the same event name.",
+            "help": "GTM custom reactive event name for \u003ccode\u003e\u003cb\u003eFunctionality Storage\u003c/code\u003e\u003c/b\u003e. Default name: \u003ccode\u003e\u003cb\u003ereactive_functionality_on\u003c/code\u003e\u003c/b\u003e. You need to configure a \u003ccode\u003e\u003cb\u003eCustom Event\u003c/code\u003e\u003c/b\u003e trigger using the same event name.",
             "defaultValue": "reactive_functionality_on",
             "enablingConditions": [
               {
@@ -617,9 +617,9 @@ ___TEMPLATE_PARAMETERS___
           {
             "type": "TEXT",
             "name": "personalizationEventName",
-            "displayName": "Personalization Storage Event Name:",
+            "displayName": "Personalization Storage Event Name",
             "simpleValueType": true,
-            "help": "GTM custom reactive event name for \"Personalization Storage\". Default name: \"reactive_personalization_on\". You need to configure a \"Custom Event\" trigger using the same event name.",
+            "help": "GTM custom reactive event name for \u003ccode\u003e\u003cb\u003ePersonalization Storage\u003c/code\u003e\u003c/b\u003e. Default name: \u003ccode\u003e\u003cb\u003ereactive_personalization_on\u003c/code\u003e\u003c/b\u003e. You need to configure a \u003ccode\u003e\u003cb\u003eCustom Event\u003c/code\u003e\u003c/b\u003e trigger using the same event name.",
             "defaultValue": "reactive_personalization_on",
             "enablingConditions": [
               {
@@ -638,9 +638,9 @@ ___TEMPLATE_PARAMETERS___
           {
             "type": "TEXT",
             "name": "securityEventName",
-            "displayName": "Security Storage Event Name:",
+            "displayName": "Security Storage Event Name",
             "simpleValueType": true,
-            "help": "GTM custom reactive event name for \"Security Storage\". Default name: \"reactive_security_on\". You need to configure a \"Custom Event\" trigger using the same event name.",
+            "help": "GTM custom reactive event name for \u003ccode\u003e\u003cb\u003eSecurity Storage\u003c/code\u003e\u003c/b\u003e. Default name: \u003ccode\u003e\u003cb\u003ereactive_security_on\u003c/code\u003e\u003c/b\u003e. You need to configure a \u003ccode\u003e\u003cb\u003eCustom Event\u003c/code\u003e\u003c/b\u003e trigger using the same event name.",
             "defaultValue": "reactive_security_on",
             "enablingConditions": [
               {
@@ -659,9 +659,9 @@ ___TEMPLATE_PARAMETERS___
           {
             "type": "TEXT",
             "name": "adUserDataEventName",
-            "displayName": "Ad User Data Event Name:",
+            "displayName": "Ad User Data Event Name",
             "simpleValueType": true,
-            "help": "GTM custom reactive event name for \"Ad User Data\". Default name: \"reactive_ad_user_data_on\". You need to configure a \"Custom Event\" trigger using the same event name.",
+            "help": "GTM custom reactive event name for \u003ccode\u003e\u003cb\u003eAd User Data\u003c/code\u003e\u003c/b\u003e. Default name: \u003ccode\u003e\u003cb\u003ereactive_ad_user_data_on\u003c/code\u003e\u003c/b\u003e. You need to configure a \u003ccode\u003e\u003cb\u003eCustom Event\u003c/code\u003e\u003c/b\u003e trigger using the same event name.",
             "defaultValue": "reactive_ad_user_data_on",
             "enablingConditions": [
               {
@@ -680,9 +680,9 @@ ___TEMPLATE_PARAMETERS___
           {
             "type": "TEXT",
             "name": "adPersonalizationEventName",
-            "displayName": "Ad Personalization Event Name:",
+            "displayName": "Ad Personalization Event Name",
             "simpleValueType": true,
-            "help": "GTM custom reactive event name for \"Ad Personalization\". Default name: \"reactive_ad_personalization_on\". You need to configure a \"Custom Event\" trigger using the same event name.",
+            "help": "GTM custom reactive event name for \u003ccode\u003e\u003cb\u003eAd Personalization\u003c/code\u003e\u003c/b\u003e. Default name: \u003ccode\u003e\u003cb\u003ereactive_ad_personalization_on\u003c/code\u003e\u003c/b\u003e. You need to configure a \u003ccode\u003e\u003cb\u003eCustom Event\u003c/code\u003e\u003c/b\u003e trigger using the same event name.",
             "defaultValue": "reactive_ad_personalization_on",
             "enablingConditions": [
               {
@@ -701,9 +701,9 @@ ___TEMPLATE_PARAMETERS___
           {
             "type": "TEXT",
             "name": "globalConsentEventName",
-            "displayName": "Global Consent Event Name:",
+            "displayName": "Global Consent Event Name",
             "simpleValueType": true,
-            "help": "GTM custom reactive event name for \"Global consent\". Default name: \"reactive_global_consent_on\". You need to configure a \"Custom Event\" trigger using the same event name.",
+            "help": "GTM custom reactive event name for \u003ccode\u003e\u003cb\u003eGlobal consent\u003c/code\u003e\u003c/b\u003e. Default name: \u003ccode\u003e\u003cb\u003ereactive_global_consent_on\u003c/code\u003e\u003c/b\u003e. You need to configure a \u003ccode\u003e\u003cb\u003eCustom Event\u003c/code\u003e\u003c/b\u003e trigger using the same event name.",
             "defaultValue": "reactive_global_consent_on",
             "enablingConditions": [
               {
@@ -717,6 +717,68 @@ ___TEMPLATE_PARAMETERS___
         "enablingConditions": [
           {
             "paramName": "activateReactiveEvents",
+            "paramValue": true,
+            "type": "EQUALS"
+          }
+        ]
+      },
+      {
+        "type": "CHECKBOX",
+        "name": "activateVendorEvents",
+        "checkboxText": "Activate Vendor Events",
+        "simpleValueType": true,
+        "help": "Activate support for Commanders Act native vendors by mapping the \u003ccode\u003e\u003cb\u003eVendor Id\u003c/code\u003e\u003c/b\u003e, which can be retrieved in Commanders Act UI following \u003ccode\u003e\u003cb\u003eData Governance\u003c/b\u003e\u003c/code\u003e → \u003ccode\u003e\u003cb\u003eConsent Management\u003c/b\u003e\u003c/code\u003e → \u003ccode\u003e\u003cb\u003eVendors\u003c/b\u003e\u003c/code\u003e (Ref. \u003ca href\u003d\"https://doc.commandersact.com/features/consent-management/user-guides/categories-and-tags/manage-vendors#vendors\" target\u003d\"_blank\"\u003eLINK\u003c/a\u003e), and the \u003ccode\u003e\u003cb\u003eVendor Event Name\u003c/b\u003e\u003c/code\u003e. The event name needs to be used as \u003ccode\u003e\u003cb\u003eCustom Event\u003c/b\u003e\u003c/code\u003e trigger in the third-party vendor tag(s). It\u0027s recommended to set the \u003ccode\u003e\u003cb\u003eVendor Name\u003c/b\u003e\u003c/code\u003e to keep a reference with the related \u003ccode\u003e\u003cb\u003eVendor Id\u003c/b\u003e\u003c/code\u003e."
+      },
+      {
+        "type": "GROUP",
+        "name": "vendorEventGroup",
+        "displayName": "Vendor Events",
+        "groupStyle": "ZIPPY_OPEN",
+        "subParams": [
+          {
+            "type": "SIMPLE_TABLE",
+            "name": "vendorTable",
+            "displayName": "",
+            "simpleTableColumns": [
+              {
+                "defaultValue": "",
+                "displayName": "Vendor Name",
+                "name": "vendor_name",
+                "type": "TEXT"
+              },
+              {
+                "defaultValue": "",
+                "displayName": "Vendor Id",
+                "name": "vendor_id",
+                "type": "TEXT",
+                "valueValidators": [
+                  {
+                    "type": "NON_EMPTY"
+                  }
+                ]
+              },
+              {
+                "defaultValue": "",
+                "displayName": "Vendor Event Name",
+                "name": "vendor_event_name",
+                "type": "TEXT",
+                "valueValidators": [
+                  {
+                    "type": "NON_EMPTY"
+                  }
+                ]
+              }
+            ],
+            "valueValidators": [
+              {
+                "type": "NON_EMPTY"
+              }
+            ]
+          }
+        ],
+        "enablingConditions": [
+          {
+            "paramName": "activateVendorEvents",
             "paramValue": true,
             "type": "EQUALS"
           }
@@ -767,29 +829,29 @@ if (data.advancedFeatures) {
   if (data.injectCmpJsFlag && data.injectCmpJsFullUrl) {	
     setInWindow('tCPrivacyTagManager', 'gtm', true);
     if (queryPermission('inject_script', data.injectCmpJsFullUrl)) {
-      logToConsole('Injecting CMP Script...');
+      logToConsole('Commanders Act CMP: injecting CMP Script...');
       injectScript(data.injectCmpJsFullUrl, onSuccess, data.gtmOnFailure, data.injectCmpJsFullUrl);
     } else {
-      logToConsole('ERROR | Script load failed due to permissions mismatch.');
+      logToConsole('ERROR | Commanders Act CMP: script load failed due to permissions mismatch.');
     }
   }
   if (data.gtagEnableTcfSupport) {
-    logToConsole('Enabling TCF support for gtag...');
+    logToConsole('Commanders Act CMP: enabling TCF support for gtag...');
     setInWindow('gtag_enable_tcf_support', true, true);
   }
 }
 function onSuccess() {
-  logToConsole('CMP Script successfully loaded!');
+  logToConsole('Commanders Act CMP: CMP Script successfully loaded!');
 }
 
 gtagSet('developer_id.dOWVhY2', true);
 if (data.enableUrlPassthrough) {
   gtagSet('url_passthrough', true);
-  logToConsole("Commanders Act | OnSite API: Url Passthrough set to TRUE");
+  logToConsole("Commanders Act CMP: URL Passthrough set to TRUE");
 }
 if (data.enableAdsDataRedaction) {
   gtagSet('ads_data_redaction', true);
-  logToConsole("Commanders Act | OnSite API: Ads Data Redaction set to TRUE");
+  logToConsole("Commanders Act CMP: Ads Data Redaction set to TRUE");
 }
 
 
@@ -803,7 +865,7 @@ function setDefaultConsentByRegion(defaultTable, storageType) {
           regionDenied.push(defaultTable[i].region);
         } else {
           //No input region: send a "setDefaultConsentState" for all regions.
-          logToConsole("Default Consent State | " + storageType + " | regionDenied: ALL");
+          logToConsole("Commanders Act CMP: default consent state | " + storageType + " | regionDenied: ALL");
           let consentSettings = {};
           consentSettings[storageType] = "denied";
           consentSettings.wait_for_update = (typeof data.waitforUpdate !== "undefined") ? makeInteger(data.waitforUpdate) : 0;
@@ -815,7 +877,7 @@ function setDefaultConsentByRegion(defaultTable, storageType) {
           regionGranted.push(defaultTable[i].region);
         } else {
           //No input region: send a "setDefaultConsentState" for all regions.
-          logToConsole("Default Consent State | " + storageType + " | regionGranted: ALL");
+          logToConsole("Commanders Act CMP: default consent state | " + storageType + " | regionGranted: ALL");
           let consentSettings = {};
           consentSettings[storageType] = "granted";
           consentSettings.wait_for_update = (typeof data.waitforUpdate !== "undefined") ? makeInteger(data.waitforUpdate) : 0;
@@ -839,7 +901,7 @@ function setDefaultConsentByRegion(defaultTable, storageType) {
 			   pQ = createQueue('pixie.actionQueue'); 
 			}
 			pixie = copyFromWindow('pixie');
-			logToConsole("Xandr pixie ", pixie);
+			logToConsole("Commanders Act CMP: Xandr pixie ", pixie);
 			pixie('consent', 'default', {    
 				'ad_storage': defaultTable[i].default_consent
 			});
@@ -851,7 +913,7 @@ function setDefaultConsentByRegion(defaultTable, storageType) {
       consentSettings.region = regionDenied;
       consentSettings.wait_for_update = (typeof data.waitforUpdate !== "undefined") ? makeInteger(data.waitforUpdate) : 0;
       setDefaultConsentState(consentSettings);
-      logToConsole("Default Consent State | " + storageType + " | regionDenied:" + regionDenied.toString());
+      logToConsole("Commanders Act CMP: default consent state | " + storageType + " | regionDenied:" + regionDenied.toString());
     }
     if (regionGranted.length > 0) {
       let consentSettings = {};
@@ -859,14 +921,14 @@ function setDefaultConsentByRegion(defaultTable, storageType) {
       consentSettings.region = regionGranted;
       consentSettings.wait_for_update = (typeof data.waitforUpdate !== "undefined") ? makeInteger(data.waitforUpdate) : 0;
       setDefaultConsentState(consentSettings);
-      logToConsole("Default Consent State | " +storageType + " | regionGranted: " + regionGranted.toString());
+      logToConsole("Commanders Act CMP: default consent state | " +storageType + " | regionGranted: " + regionGranted.toString());
     }
   }
 }
 
 if (!data.disableDefaultConsent) {
   // Default settings via "setDefaultConsentState" API.
-  logToConsole("Firing default command(s)...");
+  logToConsole("Commanders Act CMP: firing default command(s)...");
     
   setDefaultConsentByRegion(data.defaultAdStorageTable, "ad_storage");
   setDefaultConsentByRegion(data.defaultAnalyticsStorageTable, "analytics_storage");
@@ -879,7 +941,7 @@ if (!data.disableDefaultConsent) {
 
 // CA Stub is initialized via "createArgumentsQueue" API
 const cact = createArgumentsQueue('cact', 'caReady');
-logToConsole("CA Stub initialized...");
+logToConsole("Commanders Act CMP: CA Stub initialized...");
 let caPrevConsent = "";
 
 function setConsentUpdateCommand (result) {
@@ -892,56 +954,56 @@ function setConsentUpdateCommand (result) {
     const adPersonalizationObj = result.consent.categories[data.caTrustAdPersonalizationCatId] || {};
     let adStatus = "", analyticsStatus = "", functionalityStatus = "", personalizationStatus = "", securityStatus = "", adUserDataStatus = "", adPersonalizationStatus = "";
     if (adObj.status === 'on') {
-        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: " + data.caTrustAdStorageCatId + " is granted!");
+        logToConsole("Commanders Act CMP: consent.onUpdate | Category ID: " + data.caTrustAdStorageCatId + " is granted!");
         adStatus = "granted";
     } else if (adObj.status === 'off') {
-        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: " + data.caTrustAdStorageCatId + " is denied!");
+        logToConsole("Commanders Act CMP: consent.onUpdate | Category ID: " + data.caTrustAdStorageCatId + " is denied!");
         adStatus = "denied";
     }
     if (analyticsObj.status === 'on') {
-        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: " + data.caTrustAnalyticsStorageCatId + " is granted!");
+        logToConsole("Commanders Act CMP: consent.onUpdate | Category ID: " + data.caTrustAnalyticsStorageCatId + " is granted!");
         analyticsStatus = "granted";
     } else if (analyticsObj.status === 'off') {
-        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: " + data.caTrustAnalyticsStorageCatId + " is denied!");
+        logToConsole("Commanders Act CMP: consent.onUpdate | Category ID: " + data.caTrustAnalyticsStorageCatId + " is denied!");
         analyticsStatus = "denied";
     }
     if (functionalityObj.status === 'on') {
-        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: " + data.caTrustFunctionalityStorageCatId + " is granted!");
+        logToConsole("Commanders Act CMP: consent.onUpdate | Category ID: " + data.caTrustFunctionalityStorageCatId + " is granted!");
         functionalityStatus = "granted";
     } else if (functionalityObj.status === 'off') {
-        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: " + data.caTrustFunctionalityStorageCatId + " is denied!");
+        logToConsole("Commanders Act CMP: consent.onUpdate | Category ID: " + data.caTrustFunctionalityStorageCatId + " is denied!");
         functionalityStatus = "denied";
     }
     if (personalizationObj.status === 'on') {
-        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: " + data.caTrustPersonalizationStorageCatId + " is granted!");
+        logToConsole("Commanders Act CMP: consent.onUpdate | Category ID: " + data.caTrustPersonalizationStorageCatId + " is granted!");
         personalizationStatus = "granted";
     } else if (personalizationObj.status === 'off') {
-        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: " + data.caTrustPersonalizationStorageCatId + " is denied!");
+        logToConsole("Commanders Act CMP: consent.onUpdate | Category ID: " + data.caTrustPersonalizationStorageCatId + " is denied!");
         personalizationStatus = "denied";
     }
     if (securityObj.status === 'on') {
-        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: " + data.caTrustSecurityStorageCatId + " is granted!");
+        logToConsole("Commanders Act CMP: consent.onUpdate | Category ID: " + data.caTrustSecurityStorageCatId + " is granted!");
         securityStatus = "granted";
     } else if (securityObj.status === 'off') {
-        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: " + data.caTrustSecurityStorageCatId + " is denied!");
+        logToConsole("Commanders Act CMP: consent.onUpdate | Category ID: " + data.caTrustSecurityStorageCatId + " is denied!");
         securityStatus = "denied";
     }
      if (adUserDataObj.status === 'on') {
-        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: " + data.caTrustAdUserDataCatId + " is granted!");
+        logToConsole("Commanders Act CMP: consent.onUpdate | Category ID: " + data.caTrustAdUserDataCatId + " is granted!");
         adUserDataStatus = "granted";
     } else if (adUserDataObj.status === 'off') {
-        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: " + data.caTrustAdUserDataCatId + " is denied!");
+        logToConsole("Commanders Act CMP: consent.onUpdate | Category ID: " + data.caTrustAdUserDataCatId + " is denied!");
         adUserDataStatus = "denied";
     }
     if (adPersonalizationObj.status === 'on') {
-        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: " + data.caTrustAdPersonalizationCatId + " is granted!");
+        logToConsole("Commanders Act CMP: consent.onUpdate | Category ID: " + data.caTrustAdPersonalizationCatId + " is granted!");
         adPersonalizationStatus = "granted";
     } else if (adPersonalizationObj.status === 'off') {
-        logToConsole("Commanders Act | OnSite API: consent.onUpdate | Category ID: " + data.caTrustAdPersonalizationCatId + " is denied!");
+        logToConsole("Commanders Act CMP: consent.onUpdate | Category ID: " + data.caTrustAdPersonalizationCatId + " is denied!");
         adPersonalizationStatus = "denied";
     }
 
-    logToConsole("Firing update command...");
+    logToConsole("Commanders Act CMP: firing update command...");
     updateConsentState({
         'ad_storage': adStatus,
         'analytics_storage': analyticsStatus,
@@ -976,7 +1038,7 @@ function setConsentUpdateCommand (result) {
 }
 
 function reactiveEventPush(result) {
-	logToConsole("caPrevConsent: ", caPrevConsent);
+	logToConsole("Commanders Act CMP | caPrevConsent: ", caPrevConsent);
 	if (data.advancedFeatures && data.activateReactiveEvents) {
 	    const dataLayerPush = createQueue('dataLayer');
 	    let triggerGlobalEvent = false;
@@ -1051,23 +1113,53 @@ function reactiveEventPush(result) {
 	}
 }
 
+function vendorEventPush(result) {
+    if (data.vendorTable && result.consent && result.consent.vendors) {
+        logToConsole("Commanders Act CMP: vendorEventPush | data.vendorTable: " + JSON.stringify(data.vendorTable));
+        logToConsole("Commanders Act CMP: vendorEventPush | result.consent.vendors: " + JSON.stringify(result.consent.vendors));
+        const dataLayerPush = createQueue('dataLayer');
+        for (let i = 0; i < data.vendorTable.length; i++) {
+            if (data.vendorTable[i].vendor_id && data.vendorTable[i].vendor_event_name) {
+                logToConsole("Commanders Act CMP: vendorEventPush | data.vendorTable[i].vendor_id: " + data.vendorTable[i].vendor_id);
+                logToConsole("Commanders Act CMP: data.vendorTable[i].vendor_event_name: " + data.vendorTable[i].vendor_event_name);
+                if (result.consent.vendors[data.vendorTable[i].vendor_id]) {
+                    logToConsole("Commanders Act CMP: result.consent.vendors[data.vendorTable[i].vendor_id].status: " + result.consent.vendors[data.vendorTable[i].vendor_id].status);
+                    if (result.consent.vendors[data.vendorTable[i].vendor_id].status === 'on') {
+                        if ((caPrevConsent === '' || (caPrevConsent.consent.vendors && caPrevConsent.consent.vendors[data.vendorTable[i].vendor_id] !== undefined && caPrevConsent.consent.vendors[data.vendorTable[i].vendor_id].status !== "on")) && (result.consent.vendors && result.consent.vendors[data.vendorTable[i].vendor_id] !== undefined && result.consent.vendors[data.vendorTable[i].vendor_id].status === "on")) {
+                            dataLayerPush({
+                                'event': data.vendorTable[i].vendor_event_name
+                            });
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 cact('consent.get', function (result) {
-    logToConsole("Commanders Act | OnSite API: consent.get");
-    logToConsole("result: ", result);
+    logToConsole("Commanders Act CMP: consent.get");
+    logToConsole("Commanders Act CMP | result: ", result);
     if (result.consent.status !== "unset") {
         setConsentUpdateCommand(result);
         if (typeof data.onlyOnConsentUpdate === 'undefined' || (typeof data.onlyOnConsentUpdate !== 'undefined' && data.onlyOnConsentUpdate === false)) {
             reactiveEventPush(result);
+        }
+        if (data.advancedFeatures && data.activateVendorEvents) {
+            vendorEventPush(result);
         }
     }
     caPrevConsent = result;
 });
 
 cact('consent.onUpdate', function (result) {
-  logToConsole("Commanders Act | OnSite API: consent.onUpdate");
-  logToConsole("result: ", result);
-  setConsentUpdateCommand(result);
-  reactiveEventPush(result);
+    logToConsole("Commanders Act CMP: consent.onUpdate");
+    logToConsole("Commanders Act CMP | result: ", result);
+    setConsentUpdateCommand(result);
+    reactiveEventPush(result);
+    if (data.advancedFeatures && data.activateVendorEvents) {
+        vendorEventPush(result);
+    }
 });
 
 data.gtmOnSuccess();
